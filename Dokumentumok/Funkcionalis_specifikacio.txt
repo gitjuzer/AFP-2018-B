@@ -12,3 +12,11 @@ Jelenlegi helyzet leírása:
 --------------------------
 A rendszer segítséget nyújt azok számára, akik valamilyen módon szeretnék tudásukat elmélyíteni egy adott területen, vagy új
 ismereteket szeretnének szerezni.
+
+
+Szereplõk:
+-------------------
+Futási idõben három szereplõ figyelhetõ meg.
+Az elsõ szereplõ maga a futó alkalmazás. (weben/androidon)
+Ezzel van interakcióban a második szereplõ, maga a felhasználó, aki kitölti a tesztet.
+A harmadik szereplõ egy web-service, ami a tesztekhez szükséges adatokat szolgáltatja az alkalmazásnak egy adatbázisból.
