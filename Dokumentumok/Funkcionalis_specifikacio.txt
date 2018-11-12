@@ -1,1 +1,8 @@
+Funkcionális specifikáció
+-------------------------
 
+A rendszer céljai:
+------------------
+A rendszer célja, hogy a felhasználó játékos körülmények között tudjon tanulni, különbözõ feladatokat megoldani. A rendszer bármilyen témájú feladatokkal használható. A felhasználó kapjon pontszámokat, adatokat arról, hogyan sikerült megoldania a feladatokat.
+A rendszer használható legyen mobilon, alkalmazás formájában, valamint webes
+felületen is legyen elérhetõ.
