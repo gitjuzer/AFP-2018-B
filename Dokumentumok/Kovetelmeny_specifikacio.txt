@@ -1,17 +1,21 @@
+Jelenlegi helyzet:
+------------------
+   Egy olyan rendszer létrehozása, melyben a felhasználó játékosan tanulhat, az általa kiválasztott témakörben, különbözõ quiz játék típusokon keresztül.
 
 
 Követelménylista:
 -----------------
 
+
 Modul		ID		Név		V.		Kifejtés
 ------------------------------------------------------------------------
 Játék		1		Quiz			 A feladatlapok játékos megoldására szolgáló modul, melyben egy kérdésre felajánlunk 
-									 3-4 válasz lehetõséget, és itt a felhasználónak kell kiválasztania a megfelelõ választ.
+							 3-4 válasz lehetõséget, és itt a felhasználónak kell kiválasztania a megfelelõ választ.
+
 
 Vágyálom rendszer:
 ------------------
 
-A végcél egy olyan mûködõ keretrendszer lenne, melyben a felhasználók játszva tanulhatnak, általuk kiválasztott témákban, az általuk létrehozott forrásokból.
-
-A projekt elsõ változatában még nem az összes játék típus építenének be, ezt a késõbbiekben pótolnánk patch-ek formájában.
-Az alap verzió egyenlõre egyetlen lehetõséget tartalmazna a tanulásra, valamint lehetõséget biztosítana a "feladatlapok" feltöltésére, elõre meghatározott témakörökben, és ezek megoldására.
+   A végcél egy olyan mûködõ keretrendszer lenne, melyben a felhasználók játszva tanulhatnak, általuk kiválasztott témákban, az általuk létrehozott forrásokból.
+   A projekt elsõ változatában még nem az összes játék típus építenének be, ezt a késõbbiekben pótolnánk patch-ek formájában.
+   Az alap verzió egyenlõre egyetlen lehetõséget tartalmazna a tanulásra, valamint lehetõséget biztosítana a "feladatlapok" feltöltésére, elõre meghatározott témakörökben, és ezek megoldására.
