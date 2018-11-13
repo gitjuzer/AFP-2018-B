@@ -2,20 +2,89 @@ Jelenlegi helyzet:
 ------------------
    Egy olyan rendszer létrehozása, melyben a felhasználó játékosan tanulhat az általa kiválasztott témakörben, különbözõ quiz játék típusokon keresztül.
 
-
-Követelménylista:
------------------
-
-
-Modul		ID		Név		V.		Kifejtés
-------------------------------------------------------------------------
-Játék		1		Quiz			 A Feladatlapok játékos megoldására szolgáló modul, melyben egy kérdésre felajánlunk 
-							 3-4 válasz lehetõséget, és a felhasználónak ki kell választania a megfelelõ választ.
-
-
 Vágyálom rendszer:
 ------------------
 
    A végcél egy olyan mûködõ keretrendszer lenne, melyben a felhasználók játszva tanulhatnak, általuk kiválasztott témákban, az általuk létrehozott forrásokból.
    A projekt elsõ változatában még nem az összes játéktípust építenénk be, ezt a késõbbiekben pótolnánk patch-ek formájában.
    Az alap verzió egyelõre egyetlen lehetõséget tartalmazna a tanulásra, valamint egy opciót a "feladatlapok" feltöltésére, elõre meghatározott témakörökben, és ezek megoldására.
+
+
+Követelménylista:
+-----------------
+
+
+Modul			ID			Név				V.			Kifejtés
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+Kompatibilitás		K1			Android kompatibilitás		1.0			Az applikáció futtatásához szükséges minimális Android verzió: 
+														Android 5.0 Lollipop (21. API szint)
+
+
+Kompatibilitás		K2			Webböngészõ kompatibilitás	1.0			A szoftver futtatásához szükséges webböngészõ minimális verziószáma:
+														- Firefox 63.0
+														- Google Chrome 70.0.3538
+														- Opera 55  
+														- Safari 12.0.1	
+		
+
+Jogosultság		K3			Regisztráció			1.0			A felhasználó a felhasználói nevének, email címének és jelszavának megadásával 
+													regisztrálja magát. A jelszó tárolása kódolva történik az adatbázisban.
+													Ha valamelyik adat ezek közül hiányzik vagy nem felel meg a követelményeknek,
+													akkor a rendszer értesíti errõl a felhasználót.
+
+
+Jogosultság		K4			Beléptetés			1.0			A felhasználó az email címe és a jelszava segítségével bejelentkezhet.
+													Ha a megadott email cím vagy jelszó nem megfelelõ, akkor a felhasználó hibaüzenetet kap.	
+
+
+Jogosultság		K5			Jogosultsági szintek		1.0			Három jogosultsági szint és a hozzájuk tartozó jogok:														
+														- Admin : * új téma létrehozása, módosítása, törlése
+															  * új teszt feltöltése, illetve törlése webes felületen
+
+														- Felhasználó : * játékos teszt kitöltése a kiválasztott témából
+																* saját profillap megtekintése
+																* saját adatok módosítása 
+														
+														- Vendég : * regisztráció
+															   * belépés
+
+
+Profil			K6			Profillap megtekintése		1.0			A felhasználó megtekintheti a saját adatait.
+
+
+Profil			K7			Profil módosítás		1.0			Email cím vagy jelszó módosításának lehetõsége a felhasználó számára.
+
+
+Játéktípusok		K8			Kvíz				1.0			Felelet választós játéktípus, melynél a felhasználónak kérdésekre kell válaszolnia
+													az elõre megadott 3-4 válaszlehetõség közül a helyes válasz kiválasztásával. Ha helyes a válasz,
+													akkor a felhasználó pontot kap, helytelen válasz esetén viszont nem kap pontot. A teszt végén pedig
+													megtekintheti az eredményét.
+
+
+Játéktípusok		K9			Összekötõs teszt		1.0			Két oszlopban láthatóak kifejezések és az egyik oszlop kifejezéseihez tartozó kifejezéseket kell megkeresni 
+													a másik oszlopban és összepárosítani velük.
+
+
+Témakörök		K10			Témakörök megjelenítése		1.0			A felhasználó megtekintheti az eddig létrehozott összes témát és választhat közülük, hogy mely témakörhöz tartozó
+													tesztet szeretne kitölteni.
+
+
+Témakörök		K11			Témakör létrehozása		1.0			Az admin létrehozhat témaköröket, amikhez kapcsolódó feladatokat tölthet fel. A létrehozáshoz a témakör nevére van szükség. 
+
+
+Témakörök		K12			Témakör módosítása		1.0			Az admin átnevezheti egy témakör nevét.
+
+
+Témakörök		K13			Témakör törlése			1.0			Az admin törölheti a kiválasztott témakört abban az esetben, ha egyetlen feladat sem tartozik hozzá.
+
+ 
+Feladatok		K14			Feladatok feltöltése		1.0			Webes felületen az admin feltölthet feladatokat a létrehozott témakörökhöz.
+													Ehhez ki kell választania azt is, hogy mely játéktípushoz szeretné feltölteni feladatot, és az alapján
+													megadni a kérdést és a válaszlehetõségeket.
+
+Feladatok		K15			Feladatok törlése		1.0			Webes felületen az admin törölheti a kiválasztott feladatot.
+
+
+UI			K16			Android és web UI		1.0			A felhasználók számára kényelmes, praktikus, harmonikus felhasználói felület megvalósítása
+													Androidos és webes környezetben is.
+
