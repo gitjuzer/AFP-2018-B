@@ -39,6 +39,7 @@ Fogalomszótár:
 	-[gameboard]: Játék közben, a különbözõ elemeket tartalmazó felület
 	-[backend]: A kiszolgáló, ahonnan az alkalmazást el lehet érni 
 	-[frontend]:  egy réteg ami feladata a rendszerbõl kijutó adatok prezentálása, illetve a bejövõ adatok fogadása
+	-[web-service]:különbözõ programnyelveken írt és különbözõ platformokon futó szoftveralkalmazások interneten keresztül történõ adatcseréjére használt vebszolgáltatások.
 
 
 
