@@ -6,12 +6,16 @@ A rendszer céljai:
 A rendszer célja, hogy a felhasználó játékos körülmények között tudjon tanulni, különbözõ feladatokat megoldani. A rendszer bármilyen témájú feladatokkal használható. A felhasználó kapjon pontszámokat, adatokat arról, hogyan sikerült megoldania a feladatokat.
 A rendszer használható legyen mobilon, alkalmazás formájában, valamint webes
 felületen is legyen elérhetõ.
+A rendszer tájékoztassa a felhasználot hogy a feladat megoldása idõre megy.
+A felhasználó kapjon pontszámokat, adatokat arról, hogyan sikerült megoldania a feladatokat.
+A rendszer webes felületen legyen elérhetõ.
 
 
 Jelenlegi helyzet leírása:
 --------------------------
 A rendszer segítséget nyújt azok számára, akik valamilyen módon szeretnék tudásukat elmélyíteni egy adott területen, vagy új
 ismereteket szeretnének szerezni.
+Web UI: Jelenleg a webes felület funkcionális- és arculati tervezése, megvalósítása zajlik, pre-alfa verzióban van.
 
 
 Vágyálom rendszer leírása:
@@ -20,6 +24,14 @@ A rendszer elérhetõ androidon alkalmazásként, valamint hasonló formában webes fe
 Legyen egy nyítóoldal/képernyõ, ahol a felhasználó választhat a neki megfelelõ témák/feladatok közül. A tesztsorok változatosak, különbözõ feladattípusok vannak.
 Legyen egyszerû feleletválasztós kérdés, ahol több válasz közül a helyeset kell kijelölni. Legyen emellett párosítós feladat, ahol kettõ oszlopban található kifejezéseket kell összekötni.
 A teszt kitöltése után megkapjuk hány pontot értünk el.
+
+Web UI:
+-Legyen egy nyitóoldal, ahol a bejelentkezés, regisztráció történik.
+-A képernyõ felsõ részében különbözõ képek találhatóak, fõleg esztétikai szempontból.
+-Legyen egy játék felület, ahol bal felsõ sarokban az aktuális pontszám, a jobb felsõ sarokban a hátralévõ idõ látható.
+-A képernyõ közepén legyen egy nagy méretû feleletválasztós kérdés, alatta pedig több válasz közül a helyeset kell kijelölni.
+-A képernyõ jobb alsó sarkában találhatók az oldalhoz tartozó egyéb információk. 
+-A teszt kitöltése után megkapjuk hány pontot értünk el.
 
 
 Szereplõk:
