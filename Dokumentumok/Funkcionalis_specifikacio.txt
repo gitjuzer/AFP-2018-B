@@ -28,3 +28,17 @@ Futási idõben három szereplõ figyelhetõ meg.
 Az elsõ szereplõ maga a futó alkalmazás. (weben/androidon)
 Ezzel van interakcióban a második szereplõ, maga a felhasználó, aki kitölti a tesztet.
 A harmadik szereplõ egy web-service, ami a tesztekhez szükséges adatokat szolgáltatja az alkalmazásnak egy adatbázisból.
+
+
+Fogalomszótár:
+--------------
+
+	-[alfa]: a program elsõ tesztelési folyamatbán lévõ verzió.
+	-[bug]: fejlesztési hiba ami által a program nem a várt eredményt hozza 
+	-[main menu]: A fõ menü, amely a weboldal/program indulásakor megjelenik
+	-[gameboard]: Játék közben, a különbözõ elemeket tartalmazó felület
+	-[backend]: A kiszolgáló, ahonnan az alkalmazást el lehet érni 
+	-[frontend]:  egy réteg ami feladata a rendszerbõl kijutó adatok prezentálása, illetve a bejövõ adatok fogadása
+
+
+
