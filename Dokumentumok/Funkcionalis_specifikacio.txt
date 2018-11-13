@@ -17,8 +17,8 @@ ismereteket szeretnének szerezni.
 Vágyálom rendszer leírása:
 --------------------------
 A rendszer elérhetõ androidon alkalmazásként, valamint hasonló formában webes felületen is.
-Legyen egy nyítóoldal/képernyõ, ahol a felhasználó választhat a neki megfelelõ témák/feladatok közül. A teszt sorok változatosak, különbözõ feladattípusok vannak.
-Legyen egyszerû felelet választós kérdés, ahol több válasz küzül a helyeset kell kijelölni. Legyen emellett párosítós feladat, ahol kettõ oszlopban található kifejezéseket kell összekötni.
+Legyen egy nyítóoldal/képernyõ, ahol a felhasználó választhat a neki megfelelõ témák/feladatok közül. A tesztsorok változatosak, különbözõ feladattípusok vannak.
+Legyen egyszerû feleletválasztós kérdés, ahol több válasz közül a helyeset kell kijelölni. Legyen emellett párosítós feladat, ahol kettõ oszlopban található kifejezéseket kell összekötni.
 A teszt kitöltése után megkapjuk hány pontot értünk el.
 
 
