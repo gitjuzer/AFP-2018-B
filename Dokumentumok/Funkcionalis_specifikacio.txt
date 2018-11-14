@@ -15,7 +15,7 @@ Jelenlegi helyzet leírása:
 --------------------------
 A rendszer segítséget nyújt azok számára, akik valamilyen módon szeretnék tudásukat elmélyíteni egy adott területen, vagy új
 ismereteket szeretnének szerezni.
-Web UI: Jelenleg a webes felület funkcionális- és arculati tervezése, megvalósítása zajlik, pre-alfa verzióban van.
+A XXI. század megköveteli, hogy mindez hálózaton is elérhetõ legyen, ennek megfelelõen Android alkalmazást és weboldalt is a megrendelõ rendelkezésére kell bocsátani.
 
 
 Vágyálom rendszer leírása:
@@ -45,7 +45,6 @@ A harmadik szereplõ egy web-service, ami a tesztekhez szükséges adatokat szolgál
 Fogalomszótár:
 --------------
 
-	-[alfa]: a program elsõ tesztelési folyamatbán lévõ verzió.
 	-[bug]: fejlesztési hiba ami által a program nem a várt eredményt hozza 
 	-[main menu]: A fõ menü, amely a weboldal/program indulásakor megjelenik
 	-[gameboard]: Játék közben, a különbözõ elemeket tartalmazó felület
