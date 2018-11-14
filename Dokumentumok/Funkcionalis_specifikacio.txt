@@ -28,7 +28,7 @@ A teszt kitöltése után megkapjuk hány pontot értünk el.
 Web UI:
 -Legyen egy nyitóoldal, ahol a bejelentkezés, regisztráció történik.
 -A képernyõ felsõ részében különbözõ képek találhatóak, fõleg esztétikai szempontból.
--Legyen egy játék felület, ahol bal felsõ sarokban az aktuális pontszám, a jobb felsõ sarokban a hátralévõ idõ látható.
+-Legyen egy játék felület, ahol bal és a jobb felsõ sarokban a hátralévõ idõ látható. A pontszám pozíciója még megbeszélés kérdése.
 -A képernyõ közepén legyen egy nagy méretû feleletválasztós kérdés, alatta pedig több válasz közül a helyeset kell kijelölni.
 -A képernyõ jobb alsó sarkában találhatók az oldalhoz tartozó egyéb információk. 
 -A teszt kitöltése után megkapjuk hány pontot értünk el.
