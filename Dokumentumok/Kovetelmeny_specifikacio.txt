@@ -7,7 +7,7 @@ Vágyálom rendszer:
 
    A végcél egy olyan mûködõ keretrendszer lenne, melyben a felhasználók játszva tanulhatnak, általuk kiválasztott témákban, az általuk létrehozott forrásokból.
    A projekt elsõ változatában még nem az összes játéktípust építenénk be, ezt a késõbbiekben pótolnánk patch-ek formájában.
-   Az alap verzió egyelõre egyetlen lehetõséget tartalmazna a tanulásra, valamint egy opciót a "feladatlapok" feltöltésére, elõre meghatározott témakörökben, és ezek megoldására.
+   Az alap verzió egyelõre kettõ lehetõséget tartalmazna a tanulásra, valamint egy opciót a "feladatlapok" feltöltésére, elõre meghatározott témakörökben, és ezek megoldására.
 
 
 Követelménylista:
