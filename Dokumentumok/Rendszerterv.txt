@@ -1,0 +1,20 @@
+A Rendszer céljai:
+-----------------
+
+Projekt terv:
+------------
+
+Adatbázis terv:
+--------------
+
+Fizikai környezet:
+-----------------
+
+Telepítési terv:
+---------------
+
+Karbantartási terv:
+------------------
+
+Tesztelési terv:
+---------------
