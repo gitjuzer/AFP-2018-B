@@ -1,6 +1,28 @@
 A Rendszer céljai:
 -----------------
 
+-A rendszer célja, hogy a felhasználó játékos körülmények között tudjon tanulni, különbözõ feladatokat megoldani. 
+-A felhasználó kapjon pontszámokat, adatokat arról, hogyan sikerült megoldania a feladatokat.
+-Fontos, hogy a felhasználó könnyen el tudjon igazodni a felületeken, ezért egy minimalista, egyszerû kinézetet adunk a programnak.
+-A rendszer bármilyen témájú feladatokkal használható, ezért egy adatbázisban el kell tárolni a felhasználókat, 
+és biztosítani kell az adminnak a kérdés- és válasz felöltési lehetõséget, valamint azt, hogy be tudja állítani a helyes választ.
+-Ahhoz, hogy a belépést biztosítani tudjuk, szükséges egy login képernyõ, valamint az elõbb említett adatbázis. 
+-A programnak tudnia kell csatlakozni ehhez az adatbázishoz.
+-A rendszer használható legyen Androidos eszközökön, alkalmazás formájában, valamint webes
+felületen is legyen elérhetõ. Hogy ezt biztosítani tudjuk, mindenképpen szükséges valamilyen típusú kapcsolódási 
+lehetõséget beépíteni a programba. (Web service)
+-Mivel az alkalmazást csak webes felületen, és Android alkalmazásban szeretnénk elérhetõvé tenni, nem célunk hogy más, például 
+IOS operációs rendszerrel rendelkezõ eszközön fusson.
+-Az Androidos felület a képernyõ méretébõl adódóan másképp fog kinézni, de a design, a színek hasonlóak lesznek.
+-A rendszer tájékoztassa a felhasználót hogy a feladat megoldása idõre megy. Feladat megoldás közben is láthatóvá tesszük a 
+felhasznló számára az eltelt idõt.
+-A felhasználó kapjon pontszámokat, adatokat arról, hogyan sikerült megoldania a feladatokat.
+-A program automatikusan pontozza az egyes feladatokat, tehát nem akarjuk, hogy az admin határozza meg a kérdésekre érkezõ helyes 
+válaszok esetén a pontszámot.
+-A projekt elsõ változatában még nem az összes játéktípust építenénk be, ezt a késõbbiekben pótolnánk patch-ek formájában.
+-Az alap verzió egyelõre kettõ lehetõséget tartalmazna a tanulásra, valamint egy opciót a "feladatlapok" feltöltésére, 
+elõre meghatározott témakörökben, és ezek megoldására.
+
 Projekt terv:
 ------------
 
