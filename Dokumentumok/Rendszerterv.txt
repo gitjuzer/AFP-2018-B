@@ -58,6 +58,15 @@ Adatbázis terv:
 Fizikai környezet:
 -----------------
 
+A szoftver webszervere egy beágyazott Jetty alkalmazásszerver, amely a lekéréseket vezérli REST API segítségével és erre 
+szolgáltat válaszokat. A webes részt fejlesztõ csapat számára a fejlesztési folyamat az ingyenes, nyílt forráskódú 
+Visual Studio Code fejlesztõi környezetben zajlik, ami képes az intelligens kódkezelésre (intelligent code completion) az IntelliSense segítségével.
+Ahhoz, hogy a a kész szoftvert számítógépen használhassuk, szükség van egy Windows vagy macOS vagy Linux operációs rendszert futtató számítógépre és
+egy feltelepített webböngészõre. Ajánlott webböngészõk: Firefox, Google Chrome, Opera, Safari. 
+Az alkalmazás mobiltelefonon történõ használata Android 5.0-ás vagy ettõl újabb verziószámú Androidos operációs rendszert igényel.
+Az androidos szoftver fejlesztése az alap Android SDK használatával Android Studio-ban történik.
+
+
 Telepítési terv:
 ---------------
 
