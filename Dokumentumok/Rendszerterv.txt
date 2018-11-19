@@ -15,8 +15,8 @@ lehetõséget beépíteni a programba. (Web service)
 IOS operációs rendszerrel rendelkezõ eszközön fusson.
 -Az Androidos felület a képernyõ méretébõl adódóan másképp fog kinézni, de a design, a színek hasonlóak lesznek.
 -A rendszer tájékoztassa a felhasználót hogy a feladat megoldása idõre megy. Feladat megoldás közben is láthatóvá tesszük a 
-felhasznló számára az eltelt idõt.
--A felhasználó kapjon pontszámokat, adatokat arról, hogyan sikerült megoldania a feladatokat.
+felhasználó számára a hátralévõ idõt.
+-A felhasználó kapjon pontszámokat, adatokat arról, hogyan sikerült megoldania a feladatokat. A pontszám megállapítása a játékos által felhasznált idõ függvénye.
 -A program automatikusan pontozza az egyes feladatokat, tehát nem akarjuk, hogy az admin határozza meg a kérdésekre érkezõ helyes 
 válaszok esetén a pontszámot.
 -A projekt elsõ változatában még nem az összes játéktípust építenénk be, ezt a késõbbiekben pótolnánk patch-ek formájában.
@@ -24,6 +24,32 @@ válaszok esetén a pontszámot.
 elõre meghatározott témakörökben, és ezek megoldására.
 
 Projekt terv:
+Megrendelõ
+~
+
+Product Owner
+~
+
+Scrum Master
+~
+
+FrontEnd Web Team
+A webes megjelenésért felel. Ez alatt elsõsorban a személyi számítógéprõl való megjelenés értendõ. Elkészítik azt a felületet, amivel a felhasználó legelõször találkozik, és amin keresztül tud kommunikálni a szoftverrel.
+Szerepkörök:
+Répás Kristóf Tamás: team leader, dinamikus kérdés-válasz felület fejlesztõje
+
+Ütemterv:
+	1. sprint(2018.11.07-11.14.): Funkcionális specifikáció, Követelményspecifikáció
+	2. sprint(2018.11.14-11.21.): Rendszerterv, weboldal 1.0
+	3. sprint(2018.11.21-11.28.):
+	4. sprint(2018.11.28-12.05.):
+
+FrontEnd Android Team
+~
+
+BackEnd Team
+~
+
 ------------
 
 Adatbázis terv:
