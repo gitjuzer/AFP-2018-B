@@ -28,10 +28,10 @@ A teszt kitöltése után megkapjuk hány pontot értünk el.
 Web UI:
 -Legyen egy nyitóoldal, ahol a bejelentkezés, regisztráció történik.
 -A képernyõ felsõ részében különbözõ képek találhatóak, fõleg esztétikai szempontból.
--Legyen egy játék felület, ahol bal és a jobb felsõ sarokban a hátralévõ idõ látható. A pontszám pozíciója még megbeszélés kérdése.
--A képernyõ közepén legyen egy nagy méretû feleletválasztós kérdés, alatta pedig több válasz közül a helyeset kell kijelölni.
+-Legyen egy játék felület, ahol bal és a jobb felsõ sarokban a hátralévõ idõ látható. A pontszám megjelenítése ezek között van középen.
+-A képernyõ közepén legyen egy nagy méretû feleletválasztós kérdés, alatta pedig több válasz közül a helyeset kell kijelölni. Helyes és helytelen válasz esetén is jelezzen a felület ennek megfelelõen. Helyes válasz esetén a játékos a felhasznált idõ függvényében kap pontokat. Helytelen válasz esetén is továbbmehet, de pontlevonásban részesül.
 -A képernyõ jobb alsó sarkában találhatók az oldalhoz tartozó egyéb információk. 
--A teszt kitöltése után megkapjuk hány pontot értünk el.
+-A teszt kitöltése után megkapjuk hány pontot értünk el. Ennek a megjelenítése az Eredménytábla oldal lesz, ahol a top10 játékos pontszámai látszanak. Illetve a tábla alatt, az adott játékos által elért pontszámtól függetlenül szerepel a saját pontszáma. Ha elérte a legalább 10. helyezéshez elégséges pontszámot, akkor a saját eredménye az Eredménytáblában is megjelenik a többitõl elkülöníthetõ dizájnnal.
 
 
 Szereplõk:
