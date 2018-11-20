@@ -27,7 +27,7 @@ tr {
     
 }
 th, td{
-    padding: 1em;    
+    padding: 0.5em;    
 }
 
 tr:nth-of-type(even) {
