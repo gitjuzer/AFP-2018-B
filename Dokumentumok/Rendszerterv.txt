@@ -134,9 +134,9 @@ Bejelentkezés után megjelenik a játékos felület.
 
 Játék Felület:
 - A játék felület elrendezésének ellenőrzése:
-Elvárt működés:bal fent megjelin ak idő egy nem egész körben, jobb fent megjelenik a pontszám egy hasonló nem egész körben.
-A kettő között megjelenik egy táblázat ami szynben elüt a háttértől. Fent egy nagy cellába kerül a kérdés, és ez alá kerülnek a válaszlehetőségek 4 külön cellába.
-A kérdésnek a cellájának a szine különbözi a válasz cellák szinétől.
+Elvárt működés:jobb fent megjelin az idő , bal fent megjelenik a pontszám .
+Ezek alatt középen egy nagy cellába kerül a kérdés, és ez alá kerülnek a válaszlehetőségek 4 külön cellába.
+A kérdésnek a cellájának a szine különböző a válasz cellák szinétől.
 
 - Pont számláló működése:
 Elvárt működés: Ha a megfelelő választ választotta ki akkor az eltelt idő fügvényében kap pontokat.
@@ -157,9 +157,9 @@ Bejelentkezés után megjelenik a játékos felület.
 
 Játék Felület:
 - A játék felület elrendezésének ellenőrzése:
-Elvárt működés:bal fent megjelin ak idő egy nem egész körben, jobb fent megjelenik a pontszám egy hasonló nem egész körben.
-A kettő között megjelenik egy táblázat ami szynben elüt a háttértől. Fent egy nagy cellába kerül a kérdés, és ez alá kerülnek a válaszlehetőségek 4 külön cellába.
-A kérdésnek a cellájának a szine különbözi a válasz cellák szinétől.
+Elvárt működés:bal fent megjelin az idő egy nem egész körben, jobb fent megjelenik a pontszám egy hasonló nem egész körben.
+A kettő között megjelenik egy táblázat ami szinben elüt a háttértől. Fent egy nagy cellába kerül a kérdés, és ez alá kerülnek a válaszlehetőségek 4 külön cellába.
+A kérdésnek a cellájának a szine különböző a válasz cellák szinétől.
 
 - Pont számláló működése:
 Elvárt működés: Ha a megfelelő választ választotta ki akkor az eltelt idő fügvényében kap pontokat.
