@@ -77,6 +77,16 @@ Telepítési terv:
 
 Karbantartási terv:
 ------------------
+A szoftver a jövőben nem igényel nagy karbantartásokat,
+ezek az alábbi részekre bonthatók:
+
+- A szoftver tesztelése újabb verziójú böngészőkön valamint androidon is. 
+  Hiba keletkezése esetén annak javítása.
+
+- A kiszolgáló szerver státuszának ellenőrzése. 
+  Offline szerver esetén újraindítás.
+
+- Igény esetén új funkció vagy feladat típus hozzáadása.
 
 Tesztelési terv:
 ---------------
