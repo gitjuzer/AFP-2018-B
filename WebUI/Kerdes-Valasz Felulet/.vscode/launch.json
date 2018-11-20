@@ -8,7 +8,7 @@
             "type": "chrome",
             "request": "launch",
             "name": "Launch Chrome against localhost",
-            "url": "C:/Users/Kerdes-Valasz/Kerdes_Valasz.html",
+            "url": "C:/Users/Kerdes_Valasz/Kerdes_Valasz.html",
             "webRoot": "${workspaceFolder}"
         }
     ]

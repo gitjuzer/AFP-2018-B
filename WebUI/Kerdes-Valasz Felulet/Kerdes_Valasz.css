@@ -87,17 +87,36 @@ Inkább simán váltson zöldre vagy pirosra, attól függően, hogy jó-e a vá
 
 
 
-#countdown {
-  position: relative;
+#countdown_left {
+  position: absolute;
+  top: 125px;
+  left: 375px;
   margin: auto;
-  margin-top: 100px;
+
   height: 40px;
   width: 40px;
   text-align: center;
 }
 
-#countdown-number {
-  color: blue;
+#countdown-number_left {
+  color: black;
+  display: inline-block;
+  line-height: 40px;
+}
+
+#countdown_right {
+  position: absolute;
+  top: 125px;
+  right: 225px;
+  margin: auto;
+
+  height: 40px;
+  width: 40px;
+  text-align: center;
+}
+
+#countdown-number_right {
+  color: black;
   display: inline-block;
   line-height: 40px;
 }
@@ -106,26 +125,27 @@ svg {
   position: absolute;
   top: 0;
   right: 0;
-  width: 40px;
-  height: 40px;
+  width: 200px;
+  height: 200px;
   transform: rotateY(-180deg) rotateZ(-90deg);
 }
 
-svg circle {
-  stroke-dasharray: 113px;
+svg circle{
+  stroke-dasharray: 500px;
   stroke-dashoffset: 0px;
   stroke-linecap: round;
-  stroke-width: 2px;
-  stroke: black;
+  stroke-width: 10px;
+  stroke: #D9042B;
   fill: none;
-  animation: countdown 10s linear infinite forwards;
+  animation: countdown 30s linear infinite forwards;
 }
+
 
 @keyframes countdown {
   from {
     stroke-dashoffset: 0px;
   }
   to {
-    stroke-dashoffset: 113px;
+    stroke-dashoffset: 500px;
   }
 }

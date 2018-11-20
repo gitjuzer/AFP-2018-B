@@ -1,4 +1,4 @@
-let countdownNumberEl = document.getElementById('countdown-number');
+let countdownNumberEl = document.getElementById('countdown-number_left/right');
 let countdown = 10;
 
 countdownNumberEl.textContent = countdown;
