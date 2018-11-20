@@ -47,8 +47,12 @@ Répás Kristóf Tamás: team leader, dinamikus kérdés-válasz felület fejlesztõje
 FrontEnd Android Team
 ~
 
-BackEnd Team
-~
+BackEnd Team:
+Webservice megvalósítása, adatbázis megtervezése, és kapcsolódása.
+-Serfõzõ Marcell 
+-Jelencsik Ádám
+-Csutorás Dániel
+-Bocsi Dávid
 
 ------------
 
