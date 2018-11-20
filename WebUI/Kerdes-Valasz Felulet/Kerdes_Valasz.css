@@ -1,0 +1,131 @@
+body {
+  background-color: #BF9B6F;
+}
+#top, #bottom, #left, #right {
+  background: #592C12;
+  position: fixed;
+}
+#left, #right {
+  top: 0;
+  bottom: 0;
+  width: 15px;
+}
+#left {left: 0;}
+#right {right: 0;}
+#top, #bottom {
+  left: 0; right: 0;
+  height: 15px;
+}
+#top {top: 0;}
+#bottom {bottom: 0;}
+
+
+table, th, td {
+  margin: auto;
+  /*margin-top: 158px;*/
+  text-align: center;
+}
+
+
+#question {
+  max-height: 400px;
+  max-width: 1200px;
+  background-color: #D9042B;
+  border: 10px solid black;
+  border-collapse: collapse;
+  margin: auto;
+  margin-top: 350px;
+}
+#question_text {
+  max-height: 180px;
+  max-width: 1180px;
+  background-color: #D9042B;
+  margin: auto;
+  margin-top: 10px;
+  overflow: auto;
+  text-align: justify;
+}
+#question_text::-webkit-scrollbar {
+  width: 20px;
+}
+#question_text::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 5px grey;
+}
+#question_text::-webkit-scrollbar-thumb {
+  background: rgb(175, 26, 53);
+}
+#question_text::-webkit-scrollbar-thumb:hover {
+  background: #c07474;
+}
+
+
+.answerParent {
+  height: 100px;
+}
+.answer {
+  background-color: #F2CEAE;
+  height: 100%;
+  width: 100%;
+  border-color: #F2CEAE;
+  font-size: 16px;
+}
+.answer:hover {
+  background-color: rgba(218, 199, 182, 0.712);
+}
+
+#info {
+  position: fixed;
+  bottom: 15px;
+  right: 15px;
+  width: 300px;
+  border: 3px solid rgb(190, 97, 35);
+}
+/*
+https://codepen.io/dhanishgajjar/pen/OgYdzR
+Inkább simán váltson zöldre vagy pirosra, attól függően, hogy jó-e a válasz vagy nem.
+*/
+
+
+
+#countdown {
+  position: relative;
+  margin: auto;
+  margin-top: 100px;
+  height: 40px;
+  width: 40px;
+  text-align: center;
+}
+
+#countdown-number {
+  color: blue;
+  display: inline-block;
+  line-height: 40px;
+}
+
+svg {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 40px;
+  height: 40px;
+  transform: rotateY(-180deg) rotateZ(-90deg);
+}
+
+svg circle {
+  stroke-dasharray: 113px;
+  stroke-dashoffset: 0px;
+  stroke-linecap: round;
+  stroke-width: 2px;
+  stroke: black;
+  fill: none;
+  animation: countdown 10s linear infinite forwards;
+}
+
+@keyframes countdown {
+  from {
+    stroke-dashoffset: 0px;
+  }
+  to {
+    stroke-dashoffset: 113px;
+  }
+}
