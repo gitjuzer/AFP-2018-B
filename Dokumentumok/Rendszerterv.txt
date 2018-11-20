@@ -1,30 +1,30 @@
-A Rendszer céljai:
+ï»¿A Rendszer cÃ©ljai:
 -----------------
 
--A rendszer célja, hogy a felhasználó játékos körülmények között tudjon tanulni, különbözõ feladatokat megoldani. 
--A felhasználó kapjon pontszámokat, adatokat arról, hogyan sikerült megoldania a feladatokat.
--Fontos, hogy a felhasználó könnyen el tudjon igazodni a felületeken, ezért egy minimalista, egyszerû kinézetet adunk a programnak.
--A rendszer bármilyen témájú feladatokkal használható, ezért egy adatbázisban el kell tárolni a felhasználókat, 
-és biztosítani kell az adminnak a kérdés- és válasz felöltési lehetõséget, valamint azt, hogy be tudja állítani a helyes választ.
--Ahhoz, hogy a belépést biztosítani tudjuk, szükséges egy login képernyõ, valamint az elõbb említett adatbázis. 
--A programnak tudnia kell csatlakozni ehhez az adatbázishoz.
--A rendszer használható legyen Androidos eszközökön, alkalmazás formájában, valamint webes
-felületen is legyen elérhetõ. Hogy ezt biztosítani tudjuk, mindenképpen szükséges valamilyen típusú kapcsolódási 
-lehetõséget beépíteni a programba. (Web service)
--Mivel az alkalmazást csak webes felületen, és Android alkalmazásban szeretnénk elérhetõvé tenni, nem célunk hogy más, például 
-IOS operációs rendszerrel rendelkezõ eszközön fusson.
--Az Androidos felület a képernyõ méretébõl adódóan másképp fog kinézni, de a design, a színek hasonlóak lesznek.
--A rendszer tájékoztassa a felhasználót hogy a feladat megoldása idõre megy. Feladat megoldás közben is láthatóvá tesszük a 
-felhasználó számára a hátralévõ idõt.
--A felhasználó kapjon pontszámokat, adatokat arról, hogyan sikerült megoldania a feladatokat. A pontszám megállapítása a játékos által felhasznált idõ függvénye.
--A program automatikusan pontozza az egyes feladatokat, tehát nem akarjuk, hogy az admin határozza meg a kérdésekre érkezõ helyes 
-válaszok esetén a pontszámot.
--A projekt elsõ változatában még nem az összes játéktípust építenénk be, ezt a késõbbiekben pótolnánk patch-ek formájában.
--Az alap verzió egyelõre kettõ lehetõséget tartalmazna a tanulásra, valamint egy opciót a "feladatlapok" feltöltésére, 
-elõre meghatározott témakörökben, és ezek megoldására.
+-A rendszer cÃ©lja, hogy a felhasznÃ¡lÃ³ jÃ¡tÃ©kos kÃ¶rÃ¼lmÃ©nyek kÃ¶zÃ¶tt tudjon tanulni, kÃ¼lÃ¶nbÃ¶zÅ‘ feladatokat megoldani. 
+-A felhasznÃ¡lÃ³ kapjon pontszÃ¡mokat, adatokat arrÃ³l, hogyan sikerÃ¼lt megoldania a feladatokat.
+-Fontos, hogy a felhasznÃ¡lÃ³ kÃ¶nnyen el tudjon igazodni a felÃ¼leteken, ezÃ©rt egy minimalista, egyszerÅ± kinÃ©zetet adunk a programnak.
+-A rendszer bÃ¡rmilyen tÃ©mÃ¡jÃº feladatokkal hasznÃ¡lhatÃ³, ezÃ©rt egy adatbÃ¡zisban el kell tÃ¡rolni a felhasznÃ¡lÃ³kat, 
+Ã©s biztosÃ­tani kell az adminnak a kÃ©rdÃ©s- Ã©s vÃ¡lasz felÃ¶ltÃ©si lehetÅ‘sÃ©get, valamint azt, hogy be tudja Ã¡llÃ­tani a helyes vÃ¡laszt.
+-Ahhoz, hogy a belÃ©pÃ©st biztosÃ­tani tudjuk, szÃ¼ksÃ©ges egy login kÃ©pernyÅ‘, valamint az elÅ‘bb emlÃ­tett adatbÃ¡zis. 
+-A programnak tudnia kell csatlakozni ehhez az adatbÃ¡zishoz.
+-A rendszer hasznÃ¡lhatÃ³ legyen Androidos eszkÃ¶zÃ¶kÃ¶n, alkalmazÃ¡s formÃ¡jÃ¡ban, valamint webes
+felÃ¼leten is legyen elÃ©rhetÅ‘. Hogy ezt biztosÃ­tani tudjuk, mindenkÃ©ppen szÃ¼ksÃ©ges valamilyen tÃ­pusÃº kapcsolÃ³dÃ¡si 
+lehetÅ‘sÃ©get beÃ©pÃ­teni a programba. (Web service)
+-Mivel az alkalmazÃ¡st csak webes felÃ¼leten, Ã©s Android alkalmazÃ¡sban szeretnÃ©nk elÃ©rhetÅ‘vÃ© tenni, nem cÃ©lunk hogy mÃ¡s, pÃ©ldÃ¡ul 
+IOS operÃ¡ciÃ³s rendszerrel rendelkezÅ‘ eszkÃ¶zÃ¶n fusson.
+-Az Androidos felÃ¼let a kÃ©pernyÅ‘ mÃ©retÃ©bÅ‘l adÃ³dÃ³an mÃ¡skÃ©pp fog kinÃ©zni, de a design, a szÃ­nek hasonlÃ³ak lesznek.
+-A rendszer tÃ¡jÃ©koztassa a felhasznÃ¡lÃ³t hogy a feladat megoldÃ¡sa idÅ‘re megy. Feladat megoldÃ¡s kÃ¶zben is lÃ¡thatÃ³vÃ¡ tesszÃ¼k a 
+felhasznÃ¡lÃ³ szÃ¡mÃ¡ra a hÃ¡tralÃ©vÅ‘ idÅ‘t.
+-A felhasznÃ¡lÃ³ kapjon pontszÃ¡mokat, adatokat arrÃ³l, hogyan sikerÃ¼lt megoldania a feladatokat. A pontszÃ¡m megÃ¡llapÃ­tÃ¡sa a jÃ¡tÃ©kos Ã¡ltal felhasznÃ¡lt idÅ‘ fÃ¼ggvÃ©nye.
+-A program automatikusan pontozza az egyes feladatokat, tehÃ¡t nem akarjuk, hogy az admin hatÃ¡rozza meg a kÃ©rdÃ©sekre Ã©rkezÅ‘ helyes 
+vÃ¡laszok esetÃ©n a pontszÃ¡mot.
+-A projekt elsÅ‘ vÃ¡ltozatÃ¡ban mÃ©g nem az Ã¶sszes jÃ¡tÃ©ktÃ­pust Ã©pÃ­tenÃ©nk be, ezt a kÃ©sÅ‘bbiekben pÃ³tolnÃ¡nk patch-ek formÃ¡jÃ¡ban.
+-Az alap verziÃ³ egyelÅ‘re kettÅ‘ lehetÅ‘sÃ©get tartalmazna a tanulÃ¡sra, valamint egy opciÃ³t a "feladatlapok" feltÃ¶ltÃ©sÃ©re, 
+elÅ‘re meghatÃ¡rozott tÃ©makÃ¶rÃ¶kben, Ã©s ezek megoldÃ¡sÃ¡ra.
 
 Projekt terv:
-Megrendelõ
+MegrendelÅ‘
 ~
 
 Product Owner
@@ -34,12 +34,13 @@ Scrum Master
 ~
 
 FrontEnd Web Team
-A webes megjelenésért felel. Ez alatt elsõsorban a személyi számítógéprõl való megjelenés értendõ. Elkészítik azt a felületet, amivel a felhasználó legelõször találkozik, és amin keresztül tud kommunikálni a szoftverrel.
-Szerepkörök:
-Répás Kristóf Tamás: team leader, dinamikus kérdés-válasz felület fejlesztõje
+A webes megjelenÃ©sÃ©rt felel. Ez alatt elsÅ‘sorban a szemÃ©lyi szÃ¡mÃ­tÃ³gÃ©prÅ‘l valÃ³ megjelenÃ©s Ã©rtendÅ‘. ElkÃ©szÃ­tik azt a felÃ¼letet, amivel a felhasznÃ¡lÃ³ legelÅ‘szÃ¶r talÃ¡lkozik, Ã©s amin keresztÃ¼l tud kommunikÃ¡lni a szoftverrel.
+SzerepkÃ¶rÃ¶k:
+RÃ©pÃ¡s KristÃ³f TamÃ¡s: team leader, dinamikus kÃ©rdÃ©s-vÃ¡lasz felÃ¼let fejlesztÅ‘je
+Balogh DÃ¡niel: nyitÃ³ oldal fejlesztÅ‘je
 
-Ütemterv:
-	1. sprint(2018.11.07-11.14.): Funkcionális specifikáció, Követelményspecifikáció
+Ãœtemterv:
+	1. sprint(2018.11.07-11.14.): FunkcionÃ¡lis specifikÃ¡ciÃ³, KÃ¶vetelmÃ©nyspecifikÃ¡ciÃ³
 	2. sprint(2018.11.14-11.21.): Rendszerterv, weboldal 1.0
 	3. sprint(2018.11.21-11.28.):
 	4. sprint(2018.11.28-12.05.):
@@ -47,31 +48,86 @@ Répás Kristóf Tamás: team leader, dinamikus kérdés-válasz felület fejlesztõje
 FrontEnd Android Team
 ~
 
-BackEnd Team
-~
+BackEnd Team:
+Webservice megvalÃ³sÃ­tÃ¡sa, adatbÃ¡zis megtervezÃ©se, Ã©s kapcsolÃ³dÃ¡sa.
+-SerfÅ‘zÅ‘ Marcell 
+-Jelencsik ÃdÃ¡m
+-CsutorÃ¡s DÃ¡niel
+-Bocsi DÃ¡vid
 
 ------------
 
-Adatbázis terv:
+AdatbÃ¡zis terv:
 --------------
 
-Fizikai környezet:
+Fizikai kÃ¶rnyezet:
 -----------------
 
-A szoftver webszervere egy beágyazott Jetty alkalmazásszerver, amely a lekéréseket vezérli REST API segítségével és erre 
-szolgáltat válaszokat. A webes részt fejlesztõ csapat számára a fejlesztési folyamat az ingyenes, nyílt forráskódú 
-Visual Studio Code fejlesztõi környezetben zajlik, ami képes az intelligens kódkezelésre (intelligent code completion) az IntelliSense segítségével.
-Ahhoz, hogy a a kész szoftvert számítógépen használhassuk, szükség van egy Windows vagy macOS vagy Linux operációs rendszert futtató számítógépre és
-egy feltelepített webböngészõre. Ajánlott webböngészõk: Firefox, Google Chrome, Opera, Safari. 
-Az alkalmazás mobiltelefonon történõ használata Android 5.0-ás vagy ettõl újabb verziószámú Androidos operációs rendszert igényel.
-Az androidos szoftver fejlesztése az alap Android SDK használatával Android Studio-ban történik.
+A szoftver webszervere egy beÃ¡gyazott Jetty alkalmazÃ¡sszerver, amely a lekÃ©rÃ©seket vezÃ©rli REST API segÃ­tsÃ©gÃ©vel Ã©s erre 
+szolgÃ¡ltat vÃ¡laszokat. A webes rÃ©szt fejlesztÅ‘ csapat szÃ¡mÃ¡ra a fejlesztÃ©si folyamat az ingyenes, nyÃ­lt forrÃ¡skÃ³dÃº 
+Visual Studio Code fejlesztÅ‘i kÃ¶rnyezetben zajlik, ami kÃ©pes az intelligens kÃ³dkezelÃ©sre (intelligent code completion) az IntelliSense segÃ­tsÃ©gÃ©vel.
+Ahhoz, hogy a a kÃ©sz szoftvert szÃ¡mÃ­tÃ³gÃ©pen hasznÃ¡lhassuk, szÃ¼ksÃ©g van egy Windows vagy macOS vagy Linux operÃ¡ciÃ³s rendszert futtatÃ³ szÃ¡mÃ­tÃ³gÃ©pre Ã©s
+egy feltelepÃ­tett webbÃ¶ngÃ©szÅ‘re. AjÃ¡nlott webbÃ¶ngÃ©szÅ‘k: Firefox, Google Chrome, Opera, Safari. 
+Az alkalmazÃ¡s mobiltelefonon tÃ¶rtÃ©nÅ‘ hasznÃ¡lata Android 5.0-Ã¡s vagy ettÅ‘l Ãºjabb verziÃ³szÃ¡mÃº Androidos operÃ¡ciÃ³s rendszert igÃ©nyel.
+Az androidos szoftver fejlesztÃ©se az alap Android SDK hasznÃ¡latÃ¡val Android Studio-ban tÃ¶rtÃ©nik.
 
 
-Telepítési terv:
+TelepÃ­tÃ©si terv:
 ---------------
 
-Karbantartási terv:
+KarbantartÃ¡si terv:
 ------------------
 
-Tesztelési terv:
+TesztelÃ©si terv:
 ---------------
+FunkcionÃ¡lis teszt
+
+
+BevezetÃ©s
+
+A Rendszer FunkcionÃ¡lis Teszt (RFT) a rendszer egÃ©szÃ©nek, beleÃ©rtve a kÃ¶rnyezeti eljÃ¡rÃ¡sokat is, alapos tesztelÃ©sek elÅ‘re meghatÃ¡rozott tesztadatokkal, amiket lehetsÃ©ges tesztelÅ‘ eszkÃ¶zÃ¶kkel kell vÃ©gezni.
+A tesztelÃ©sek cÃ©lja a rendszer Ã©s komponensei funkcionalitÃ¡sÃ¡nak teljes vizsgÃ¡lata, ellenÅ‘rzÃ©se, a rendszer Ã¡ltal megvalÃ³sÃ­tott Ã¼zleti szolgÃ¡ltatÃ¡sok verifikÃ¡lÃ¡sa.
+
+TesztelÃ©si eljÃ¡rÃ¡sok
+
+Teszteset azonosÃ­tÃ³: 001 â€“ Alfa teszt
+  - IdÅ‘tartam: 5 nap
+  - Teszt kezdete: 2018/11/29
+  - Teszt befejezÃ©se: 2018/12/02
+  - A teszt elsÅ‘dleges cÃ©lja: az eddig meglÃ©vÅ‘ funkciÃ³knak a kÃ¼lÃ¶nbÃ¶zÅ‘ bÃ¶ngÃ©szÅ‘kkel,Ã©s androidokkal valÃ³ kompatibilitÃ¡sÃ¡nak tesztelÃ©se. A tesztet a fejlesztÅ‘k vÃ©gzik.
+  - Az eljÃ¡rÃ¡s sikeres, ha kÃ¼lÃ¶nbÃ¶zÅ‘ bÃ¶ngÃ©szÅ‘kben Ã©s kÃ¼lÃ¶nbÃ¶zÅ‘ androidokon is megfelelÅ‘en mÅ±kÃ¶dnek a kÃ¼lÃ¶nbÃ¶zÅ‘ funkciÃ³k.
+
+TesztelÃ©s azonosÃ­tÃ³: 002 â€“ BÃ©ta teszt
+  - IdÅ‘tartam: 4 nap
+  - Teszt kezdete: 2018/12/04
+  - Teszt befejezÃ©se: 2018/12/07
+  - A teszt elsÅ‘dleges cÃ©lja: Minden meglÃ©vÅ‘ funkciÃ³ megfelelÅ‘ mÅ±kÃ¶dÃ©sÃ©nek ellenÅ‘rzÃ©se. A tesztet a fejlesztÅ‘k Ã©s harmadik szemÃ©lyek vÃ©gzik.
+  - Az eljÃ¡rÃ¡s sikeres, ha minden funkciÃ³ megfelelÅ‘en mÅ±kÃ¶dik a harmadik szemÃ©lyek Ã¡ltal tesztelve is.
+
+BÃ©ta teszt
+----------
+TesztelendÅ‘ bÃ¶ngÃ©szÅ‘k: Opera, Firefox, Google Chrome, Safari
+tesztelendÅ‘ android rendszerek:6.0.0(minimum), vagy Ãºjabak 
+TesztelendÅ‘ kijelzÅ‘mÃ©retek: 1280x720 (minimum), 1366x768, 1920x1080
+Androidon tesztelendÅ‘ funkciÃ³k, elemek:
+
+
+Weben tesztelendÅ‘ funkciÃ³k, elemek:
+
+Login felÃ¼let:
+- A login felÃ¼let elrendezÃ©sÃ©nek ellenÅ‘rzÃ©se:
+ElvÃ¡rt mÅ±kÃ¶dÃ©s: job oldalt lent a login rÃ©sz jelenik meg (felhasznÃ¡lÃ³nÃ©v, jelszÃ³, BejelentkezÃ©s gomb) bal oldalt meg egy ember alakzat egy szÃ¶veg buborÃ©kkal amin az Ã¡ll, hogy "A tanulÃ¡s A fejlÅ‘dÃ©s rÃ©sze!".
+   
+- A BejelentkezÃ©s gomb mÅ±kÃ¶dÃ©se:  
+ElvÃ¡rt mÅ±kÃ¶dÃ©s: MegfelelÅ‘ felhasznÃ¡lÃ³nÃ©v Ã©s jelszÃ³ megadÃ¡sa esetÃ©n a gomb lenyomÃ¡sakor bejelentkezik.
+
+BejelentkezÃ©s utÃ¡n megjelenik a jÃ¡tÃ©kos felÃ¼let.
+
+
+JÃ¡tÃ©k FelÃ¼let:
+- A jÃ¡tÃ©k felÃ¼let elrendezÃ©sÃ©nek ellenÅ‘rzÃ©se:
+ElvÃ¡rt mÅ±kÃ¶dÃ©s:bal fent megjelin ak idÅ‘ egy nem egÃ©sz kÃ¶rben, jobb fent megjelenik a pontszÃ¡m egy hasonlÃ³ nem egÃ©sz kÃ¶rben.
+A kettÅ‘ kÃ¶zÃ¶tt megjelenik egy tÃ¡blÃ¡zat ami szynben elÃ¼t a hÃ¡ttÃ©rtÅ‘l. Fent egy nagy cellÃ¡ba kerÃ¼l a kÃ©rdÃ©s, Ã©s ez alÃ¡ kerÃ¼lnek a vÃ¡laszlehetÅ‘sÃ©gek 4 kÃ¼lÃ¶n cellÃ¡ba.
+A kÃ©rdÃ©snek a cellÃ¡jÃ¡nak a szine kÃ¼lÃ¶nbÃ¶zi a vÃ¡lasz cellÃ¡k szinÃ©tÅ‘l.
+
+
