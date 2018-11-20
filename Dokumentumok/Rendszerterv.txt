@@ -80,7 +80,23 @@ Az androidos szoftver fejlesztése az alap Android SDK használatával Android S
 
 Telepítési terv:
 ---------------
+A fizika telepítési terv:
 
+- Szükség van egy adatbázis szerverre, amely egy védett LAN-on csatlakozik
+  a webszerverre, amely egy beágyazott Jetty alkalmazásszerver.
+  
+- A webszerver a lekérdezéseket REST API segítségével végzi.
+
+- A webszerverre közvetlenül az internetről kapcsolódnak rá a kliensek.
+
+A szoftver telepítési terv:
+
+- A szoftver webes felületéhez csak egy ajánlott böngésző telepítése szükséges
+  (Google Chrome, Firefox, Opera, Safari), külön szoftver nem kell hozzá.
+  
+- A szoftver Android-os telepítése és frissítése Google Play segítségével
+  történik, tehát a felhasználónak már rendelkeznie kell vele telepítés előtt.	
+  
 Karbantartási terv:
 ------------------
 A szoftver a jövőben nem igényel nagy karbantartásokat,
