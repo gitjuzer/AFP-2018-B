@@ -109,7 +109,28 @@ Béta teszt
 Tesztelendő böngészők: Opera, Firefox, Google Chrome, Safari
 tesztelendő android rendszerek:6.0.0(minimum), vagy újabak 
 Tesztelendő kijelzőméretek: 1280x720 (minimum), 1366x768, 1920x1080
+
 Androidon tesztelendő funkciók, elemek:
+
+Login felület:
+- A login felület elrendezésének ellenőrzése:
+Elvárt működés:Felül barna sávban megjelenik a "Tanulo App" felirat fehér szinnel balra igazítva. Alatta középre igazítva a "Bejelentkezés felirat".
+Ez alatt szintén középre igazítva egy köny logó , alatta található a login felület.
+
+- A Bejelentkezés gomb működése:  
+Elvárt működés: Megfelelő felhasználónév és jelszó megadása esetén a gomb lenyomásakor bejelentkezik.
+
+Bejelentkezés után megjelenik a játékos felület.
+
+Játék Felület:
+- A játék felület elrendezésének ellenőrzése:
+Elvárt működés:bal fent megjelin ak idő egy nem egész körben, jobb fent megjelenik a pontszám egy hasonló nem egész körben.
+A kettő között megjelenik egy táblázat ami szynben elüt a háttértől. Fent egy nagy cellába kerül a kérdés, és ez alá kerülnek a válaszlehetőségek 4 külön cellába.
+A kérdésnek a cellájának a szine különbözi a válasz cellák szinétől.
+
+- Pont számláló működése:
+Elvárt működés: Ha a megfelelő választ választotta ki akkor az eltelt idő fügvényében kap pontokat.
+
 
 
 Weben tesztelendő funkciók, elemek:
