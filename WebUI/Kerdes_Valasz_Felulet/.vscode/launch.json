@@ -8,7 +8,7 @@
             "type": "chrome",
             "request": "launch",
             "name": "Launch Chrome against localhost",
-            "url": "C:/Git/Kerdes_Valasz/Kerdes_Valasz.html",
+            "url": "C:/Git/AFB-2018-B/WebUI/Kerdes_Valasz_Felulet/Kerdes_Valasz.html",
             "webRoot": "${workspaceFolder}"
         }
     ]
