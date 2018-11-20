@@ -1,56 +1,58 @@
-Funkcionális specifikáció
+Funkcionï¿½lis specifikï¿½ciï¿½
 -------------------------
 
-A rendszer céljai:
+A rendszer cï¿½ljai:
 ------------------
-A rendszer célja, hogy a felhasználó játékos körülmények között tudjon tanulni, különbözõ feladatokat megoldani. A rendszer bármilyen témájú feladatokkal használható. A felhasználó kapjon pontszámokat, adatokat arról, hogyan sikerült megoldania a feladatokat.
-A rendszer használható legyen mobilon, alkalmazás formájában, valamint webes
-felületen is legyen elérhetõ.
-A rendszer tájékoztassa a felhasználot hogy a feladat megoldása idõre megy.
-A felhasználó kapjon pontszámokat, adatokat arról, hogyan sikerült megoldania a feladatokat.
-A rendszer webes felületen legyen elérhetõ.
+A rendszer cï¿½lja, hogy a felhasznï¿½lï¿½ jï¿½tï¿½kos kï¿½rï¿½lmï¿½nyek kï¿½zï¿½tt tudjon tanulni, kï¿½lï¿½nbï¿½zï¿½ feladatokat megoldani. A rendszer bï¿½rmilyen tï¿½mï¿½jï¿½ feladatokkal hasznï¿½lhatï¿½. A felhasznï¿½lï¿½ kapjon pontszï¿½mokat, adatokat arrï¿½l, hogyan sikerï¿½lt megoldania a feladatokat.
+A rendszer hasznï¿½lhatï¿½ legyen mobilon, alkalmazï¿½s formï¿½jï¿½ban, valamint webes
+felï¿½leten is legyen elï¿½rhetï¿½.
+A rendszer tï¿½jï¿½koztassa a felhasznï¿½lot hogy a feladat megoldï¿½sa idï¿½re megy.
+A felhasznï¿½lï¿½ kapjon pontszï¿½mokat, adatokat arrï¿½l, hogyan sikerï¿½lt megoldania a feladatokat.
+A rendszer webes felï¿½leten legyen elï¿½rhetï¿½.
 
 
-Jelenlegi helyzet leírása:
+Jelenlegi helyzet leï¿½rï¿½sa:
 --------------------------
-A rendszer segítséget nyújt azok számára, akik valamilyen módon szeretnék tudásukat elmélyíteni egy adott területen, vagy új
-ismereteket szeretnének szerezni.
-A XXI. század megköveteli, hogy mindez hálózaton is elérhetõ legyen, ennek megfelelõen Android alkalmazást és weboldalt is a megrendelõ rendelkezésére kell bocsátani.
+A megrendelï¿½ szeretnï¿½ kibï¿½viteni az ï¿½ltala nyï¿½jtott oktatï¿½si szolgï¿½ltatï¿½sok elï¿½rhetï¿½sï¿½gï¿½t, hogy versenytï¿½rsaihoz kï¿½pest ï¿½gy jusson piaci elï¿½nyokhï¿½z.
+Egy ï¿½j rendszer elï¿½ï¿½llï¿½tï¿½sï¿½t rendelte meg, amelyek interneten keresztï¿½l modern megoldï¿½sokkat hasznï¿½lva mï¿½kï¿½dik.
+A rendszer segï¿½tsï¿½get nyï¿½jt azok szï¿½mï¿½ra, akik valamilyen mï¿½don szeretnï¿½k tudï¿½sukat elmï¿½lyï¿½teni egy adott terï¿½leten, vagy ï¿½j
+ismereteket szeretnï¿½nek szerezni.
+A XXI. szï¿½zad megkï¿½veteli, hogy mindez hï¿½lï¿½zaton is elï¿½rhetï¿½ legyen, ennek megfelelï¿½en Android alkalmazï¿½st ï¿½s weboldalt is a megrendelï¿½ rendelkezï¿½sï¿½re kell bocsï¿½tani.
 
 
-Vágyálom rendszer leírása:
+Vï¿½gyï¿½lom rendszer leï¿½rï¿½sa:
 --------------------------
-A rendszer elérhetõ androidon alkalmazásként, valamint hasonló formában webes felületen is.
-Legyen egy nyítóoldal/képernyõ, ahol a felhasználó választhat a neki megfelelõ témák/feladatok közül. A tesztsorok változatosak, különbözõ feladattípusok vannak.
-Legyen egyszerû feleletválasztós kérdés, ahol több válasz közül a helyeset kell kijelölni. Legyen emellett párosítós feladat, ahol kettõ oszlopban található kifejezéseket kell összekötni.
-A teszt kitöltése után megkapjuk hány pontot értünk el.
+A rendszer elï¿½rhetï¿½ androidon alkalmazï¿½skï¿½nt, valamint hasonlï¿½ formï¿½ban webes felï¿½leten is.
+Legyen egy nyï¿½tï¿½oldal/kï¿½pernyï¿½, ahol a felhasznï¿½lï¿½ vï¿½laszthat a neki megfelelï¿½ tï¿½mï¿½k/feladatok kï¿½zï¿½l. A tesztsorok vï¿½ltozatosak, kï¿½lï¿½nbï¿½zï¿½ feladattï¿½pusok vannak.
+Legyen egyszerï¿½ feleletvï¿½lasztï¿½s kï¿½rdï¿½s, ahol tï¿½bb vï¿½lasz kï¿½zï¿½l a helyeset kell kijelï¿½lni. Legyen emellett pï¿½rosï¿½tï¿½s feladat, ahol kettï¿½ oszlopban talï¿½lhatï¿½ kifejezï¿½seket kell ï¿½sszekï¿½tni.
+A teszt kitï¿½ltï¿½se utï¿½n megkapjuk hï¿½ny pontot ï¿½rtï¿½nk el.
 
 Web UI:
--Legyen egy nyitóoldal, ahol a bejelentkezés, regisztráció történik.
--A képernyõ felsõ részében különbözõ képek találhatóak, fõleg esztétikai szempontból.
--Legyen egy játék felület, ahol bal és a jobb felsõ sarokban a hátralévõ idõ látható. A pontszám megjelenítése ezek között van középen.
--A képernyõ közepén legyen egy nagy méretû feleletválasztós kérdés, alatta pedig több válasz közül a helyeset kell kijelölni. Helyes és helytelen válasz esetén is jelezzen a felület ennek megfelelõen. Helyes válasz esetén a játékos a felhasznált idõ függvényében kap pontokat. Helytelen válasz esetén is továbbmehet, de pontlevonásban részesül.
--A képernyõ jobb alsó sarkában találhatók az oldalhoz tartozó egyéb információk. 
--A teszt kitöltése után megkapjuk hány pontot értünk el. Ennek a megjelenítése az Eredménytábla oldal lesz, ahol a top10 játékos pontszámai látszanak. Illetve a tábla alatt, az adott játékos által elért pontszámtól függetlenül szerepel a saját pontszáma. Ha elérte a legalább 10. helyezéshez elégséges pontszámot, akkor a saját eredménye az Eredménytáblában is megjelenik a többitõl elkülöníthetõ dizájnnal.
+-Legyen egy nyitï¿½oldal, ahol a bejelentkezï¿½s, regisztrï¿½ciï¿½ tï¿½rtï¿½nik.
+-A kï¿½pernyï¿½ felsï¿½ rï¿½szï¿½ben kï¿½lï¿½nbï¿½zï¿½ kï¿½pek talï¿½lhatï¿½ak, fï¿½leg esztï¿½tikai szempontbï¿½l.
+-Legyen egy jï¿½tï¿½k felï¿½let, ahol bal ï¿½s a jobb felsï¿½ sarokban a hï¿½tralï¿½vï¿½ idï¿½ lï¿½thatï¿½. A pontszï¿½m megjelenï¿½tï¿½se ezek kï¿½zï¿½tt van kï¿½zï¿½pen.
+-A kï¿½pernyï¿½ kï¿½zepï¿½n legyen egy nagy mï¿½retï¿½ feleletvï¿½lasztï¿½s kï¿½rdï¿½s, alatta pedig tï¿½bb vï¿½lasz kï¿½zï¿½l a helyeset kell kijelï¿½lni. Helyes ï¿½s helytelen vï¿½lasz esetï¿½n is jelezzen a felï¿½let ennek megfelelï¿½en. Helyes vï¿½lasz esetï¿½n a jï¿½tï¿½kos a felhasznï¿½lt idï¿½ fï¿½ggvï¿½nyï¿½ben kap pontokat. Helytelen vï¿½lasz esetï¿½n is tovï¿½bbmehet, de pontlevonï¿½sban rï¿½szesï¿½l.
+-A kï¿½pernyï¿½ jobb alsï¿½ sarkï¿½ban talï¿½lhatï¿½k az oldalhoz tartozï¿½ egyï¿½b informï¿½ciï¿½k. 
+-A teszt kitï¿½ltï¿½se utï¿½n megkapjuk hï¿½ny pontot ï¿½rtï¿½nk el. Ennek a megjelenï¿½tï¿½se az Eredmï¿½nytï¿½bla oldal lesz, ahol a top10 jï¿½tï¿½kos pontszï¿½mai lï¿½tszanak. Illetve a tï¿½bla alatt, az adott jï¿½tï¿½kos ï¿½ltal elï¿½rt pontszï¿½mtï¿½l fï¿½ggetlenï¿½l szerepel a sajï¿½t pontszï¿½ma. Ha elï¿½rte a legalï¿½bb 10. helyezï¿½shez elï¿½gsï¿½ges pontszï¿½mot, akkor a sajï¿½t eredmï¿½nye az Eredmï¿½nytï¿½blï¿½ban is megjelenik a tï¿½bbitï¿½l elkï¿½lï¿½nï¿½thetï¿½ dizï¿½jnnal.
 
 
-Szereplõk:
+Szereplï¿½k:
 -------------------
-Futási idõben három szereplõ figyelhetõ meg.
-Az elsõ szereplõ maga a futó alkalmazás. (weben/androidon)
-Ezzel van interakcióban a második szereplõ, maga a felhasználó, aki kitölti a tesztet.
-A harmadik szereplõ egy web-service, ami a tesztekhez szükséges adatokat szolgáltatja az alkalmazásnak egy adatbázisból.
+Futï¿½si idï¿½ben hï¿½rom szereplï¿½ figyelhetï¿½ meg.
+Az elsï¿½ szereplï¿½ maga a futï¿½ alkalmazï¿½s. (weben/androidon)
+Ezzel van interakciï¿½ban a mï¿½sodik szereplï¿½, maga a felhasznï¿½lï¿½, aki kitï¿½lti a tesztet.
+A harmadik szereplï¿½ egy web-service, ami a tesztekhez szï¿½ksï¿½ges adatokat szolgï¿½ltatja az alkalmazï¿½snak egy adatbï¿½zisbï¿½l.
 
 
-Fogalomszótár:
+Fogalomszï¿½tï¿½r:
 --------------
 
-	-[bug]: fejlesztési hiba ami által a program nem a várt eredményt hozza 
-	-[main menu]: A fõ menü, amely a weboldal/program indulásakor megjelenik
-	-[gameboard]: Játék közben, a különbözõ elemeket tartalmazó felület
-	-[backend]: A kiszolgáló, ahonnan az alkalmazást el lehet érni 
-	-[frontend]:  egy réteg ami feladata a rendszerbõl kijutó adatok prezentálása, illetve a bejövõ adatok fogadása
-	-[web-service]:különbözõ programnyelveken írt és különbözõ platformokon futó szoftveralkalmazások interneten keresztül történõ adatcseréjére használt vebszolgáltatások.
+	-[bug]: fejlesztï¿½si hiba ami ï¿½ltal a program nem a vï¿½rt eredmï¿½nyt hozza 
+	-[main menu]: A fï¿½ menï¿½, amely a weboldal/program indulï¿½sakor megjelenik
+	-[gameboard]: Jï¿½tï¿½k kï¿½zben, a kï¿½lï¿½nbï¿½zï¿½ elemeket tartalmazï¿½ felï¿½let
+	-[backend]: A kiszolgï¿½lï¿½, ahonnan az alkalmazï¿½st el lehet ï¿½rni 
+	-[frontend]:  egy rï¿½teg ami feladata a rendszerbï¿½l kijutï¿½ adatok prezentï¿½lï¿½sa, illetve a bejï¿½vï¿½ adatok fogadï¿½sa
+	-[web-service]:kï¿½lï¿½nbï¿½zï¿½ programnyelveken ï¿½rt ï¿½s kï¿½lï¿½nbï¿½zï¿½ platformokon futï¿½ szoftveralkalmazï¿½sok interneten keresztï¿½l tï¿½rtï¿½nï¿½ adatcserï¿½jï¿½re hasznï¿½lt vebszolgï¿½ltatï¿½sok.
 
 
 
