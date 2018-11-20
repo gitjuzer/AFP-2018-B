@@ -46,7 +46,12 @@ Balogh Dániel: nyitó oldal fejlesztője
 	4. sprint(2018.11.28-12.05.):
 
 FrontEnd Android Team
-~
+A telefonos kliens elkészítése a feladatuk. Elkészítik azt a felületet, amelyen keresztül a felhasználó akár utazás közben is nyugodtan tud játékosan tanulni.
+Csapattagok:
+-Berényi Szabolcs
+-Bogáti Bálint
+-Keszey Vanessza Judit
+-Sebő Andor Lajos
 
 BackEnd Team:
 Webservice megvalósítása, adatbázis megtervezése, és kapcsolódása.
