@@ -38,6 +38,7 @@ A webes megjelenésért felel. Ez alatt elsősorban a személyi számítógépr�
 Szerepkörök:
 Répás Kristóf Tamás: team leader, dinamikus kérdés-válasz felület fejlesztője
 Balogh Dániel: nyitó oldal fejlesztője
+Lehoczki Richárd: eredménytábla fejlesztője
 
 Ütemterv:
 	1. sprint(2018.11.07-11.14.): Funkcionális specifikáció, Követelményspecifikáció
