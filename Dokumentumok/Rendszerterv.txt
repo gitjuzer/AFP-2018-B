@@ -1,4 +1,4 @@
-A Rendszer céljai:
+﻿A Rendszer céljai:
 -----------------
 
 -A rendszer célja, hogy a felhasználó játékos körülmények között tudjon tanulni, különböző feladatokat megoldani. 
@@ -80,3 +80,54 @@ Karbantartási terv:
 
 Tesztelési terv:
 ---------------
+Funkcionális teszt
+
+
+Bevezetés
+
+A Rendszer Funkcionális Teszt (RFT) a rendszer egészének, beleértve a környezeti eljárásokat is, alapos tesztelések előre meghatározott tesztadatokkal, amiket lehetséges tesztelő eszközökkel kell végezni.
+A tesztelések célja a rendszer és komponensei funkcionalitásának teljes vizsgálata, ellenőrzése, a rendszer által megvalósított üzleti szolgáltatások verifikálása.
+
+Tesztelési eljárások
+
+Teszteset azonosító: 001 – Alfa teszt
+  - Időtartam: 5 nap
+  - Teszt kezdete: 2018/11/29
+  - Teszt befejezése: 2018/12/02
+  - A teszt elsődleges célja: az eddig meglévő funkcióknak a különböző böngészőkkel,és androidokkal való kompatibilitásának tesztelése. A tesztet a fejlesztők végzik.
+  - Az eljárás sikeres, ha különböző böngészőkben és különböző androidokon is megfelelően működnek a különböző funkciók.
+
+Tesztelés azonosító: 002 – Béta teszt
+  - Időtartam: 4 nap
+  - Teszt kezdete: 2018/12/04
+  - Teszt befejezése: 2018/12/07
+  - A teszt elsődleges célja: Minden meglévő funkció megfelelő működésének ellenőrzése. A tesztet a fejlesztők és harmadik személyek végzik.
+  - Az eljárás sikeres, ha minden funkció megfelelően működik a harmadik személyek által tesztelve is.
+
+Béta teszt
+----------
+Tesztelendő böngészők: Opera, Firefox, Google Chrome, Safari
+tesztelendő android rendszerek:6.0.0(minimum), vagy újabak 
+Tesztelendő kijelzőméretek: 1280x720 (minimum), 1366x768, 1920x1080
+Androidon tesztelendő funkciók, elemek:
+
+
+Weben tesztelendő funkciók, elemek:
+
+Login felület:
+- A login felület elrendezésének ellenőrzése:
+Elvárt működés: job oldalt lent a login rész jelenik meg (felhasználónév, jelszó, Bejelentkezés gomb) bal oldalt meg egy ember alakzat egy szöveg buborékkal amin az áll, hogy "A tanulás A fejlődés része!".
+   
+- A Bejelentkezés gomb működése:  
+Elvárt működés: Megfelelő felhasználónév és jelszó megadása esetén a gomb lenyomásakor bejelentkezik.
+
+Bejelentkezés után megjelenik a játékos felület.
+
+
+Játék Felület:
+- A játék felület elrendezésének ellenőrzése:
+Elvárt működés:bal fent megjelin ak idő egy nem egész körben, jobb fent megjelenik a pontszám egy hasonló nem egész körben.
+A kettő között megjelenik egy táblázat ami szynben elüt a háttértől. Fent egy nagy cellába kerül a kérdés, és ez alá kerülnek a válaszlehetőségek 4 külön cellába.
+A kérdésnek a cellájának a szine különbözi a válasz cellák szinétől.
+
+
