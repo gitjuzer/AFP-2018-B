@@ -46,7 +46,12 @@ Balogh Dániel: nyitó oldal fejlesztője
 	4. sprint(2018.11.28-12.05.):
 
 FrontEnd Android Team
-~
+A telefonos kliens elkészítése a feladatuk. Elkészítik azt a felületet, amelyen keresztül a felhasználó akár utazás közben is nyugodtan tud játékosan tanulni.
+Csapattagok:
+-Berényi Szabolcs
+-Bogáti Bálint
+-Keszey Vanessza Judit
+-Sebő Andor Lajos
 
 BackEnd Team:
 Webservice megvalósítása, adatbázis megtervezése, és kapcsolódása.
@@ -77,6 +82,16 @@ Telepítési terv:
 
 Karbantartási terv:
 ------------------
+A szoftver a jövőben nem igényel nagy karbantartásokat,
+ezek az alábbi részekre bonthatók:
+
+- A szoftver tesztelése újabb verziójú böngészőkön valamint androidon is. 
+  Hiba keletkezése esetén annak javítása.
+
+- A kiszolgáló szerver státuszának ellenőrzése. 
+  Offline szerver esetén újraindítás.
+
+- Igény esetén új funkció vagy feladat típus hozzáadása.
 
 Tesztelési terv:
 ---------------
@@ -109,7 +124,28 @@ Béta teszt
 Tesztelendő böngészők: Opera, Firefox, Google Chrome, Safari
 tesztelendő android rendszerek:6.0.0(minimum), vagy újabak 
 Tesztelendő kijelzőméretek: 1280x720 (minimum), 1366x768, 1920x1080
+
 Androidon tesztelendő funkciók, elemek:
+
+Login felület:
+- A login felület elrendezésének ellenőrzése:
+Elvárt működés:Felül barna sávban megjelenik a "Tanulo App" felirat fehér szinnel balra igazítva. Alatta középre igazítva a "Bejelentkezés felirat".
+Ez alatt szintén középre igazítva egy köny logó , alatta található a login felület.
+
+- A Bejelentkezés gomb működése:  
+Elvárt működés: Megfelelő felhasználónév és jelszó megadása esetén a gomb lenyomásakor bejelentkezik.
+
+Bejelentkezés után megjelenik a játékos felület.
+
+Játék Felület:
+- A játék felület elrendezésének ellenőrzése:
+Elvárt működés:jobb fent megjelin az idő , bal fent megjelenik a pontszám .
+Ezek alatt középen egy nagy cellába kerül a kérdés, és ez alá kerülnek a válaszlehetőségek 4 külön cellába.
+A kérdésnek a cellájának a szine különböző a válasz cellák szinétől.
+
+- Pont számláló működése:
+Elvárt működés: Ha a megfelelő választ választotta ki akkor az eltelt idő fügvényében kap pontokat.
+
 
 
 Weben tesztelendő funkciók, elemek:
@@ -126,8 +162,76 @@ Bejelentkezés után megjelenik a játékos felület.
 
 Játék Felület:
 - A játék felület elrendezésének ellenőrzése:
-Elvárt működés:bal fent megjelin ak idő egy nem egész körben, jobb fent megjelenik a pontszám egy hasonló nem egész körben.
-A kettő között megjelenik egy táblázat ami szynben elüt a háttértől. Fent egy nagy cellába kerül a kérdés, és ez alá kerülnek a válaszlehetőségek 4 külön cellába.
-A kérdésnek a cellájának a szine különbözi a válasz cellák szinétől.
+Elvárt működés:bal fent megjelin az idő egy nem egész körben, jobb fent megjelenik a pontszám egy hasonló nem egész körben.
+A kettő között megjelenik egy táblázat ami szinben elüt a háttértől. Fent egy nagy cellába kerül a kérdés, és ez alá kerülnek a válaszlehetőségek 4 külön cellába.
+A kérdésnek a cellájának a szine különböző a válasz cellák szinétől.
+
+- Pont számláló működése:
+Elvárt működés: Ha a megfelelő választ választotta ki akkor az eltelt idő fügvényében kap pontokat.
+
+
+
+
+Admin felület tesztelendő funkciók, elemek:
+
+A login felületen való sikeres bejelentkezés után megjelenik az admin felület, ha adminként léptünk be.
+
+- A témát/tesztet létrehozása  gomb működése:
+Elvárt feladat:Ezzel a gombal az admin létrehozhat/feltölthet egy ój feladatot/tesztet.
+
+ 
+- A Témát/tesztet módosítása gomb működése: 
+Elvárt feladat:Az éppen kijelölt témán/feladaton módsít, felülírja azt.
+
+- A Témat/tesztet törlése gomb működése: 
+Elvárt feladat:A kiválasztott elemet teljes mértékben eltávolítja.
+
+
+
+Tesztterv
+---------
+Ennek a dokumentumnak az a célja, hogy Tanulássegítő program megvalósítása projektben a rendszerek tesztelési elvárásait ismertesse.
+A projekt sikeres befejezésének eszköze a tesztelési terv és a tesztelési jegyzőkönyvek.
+Akkor tekinthető egy adott részrendszer tesztelése sikeresnek, ha 
+  - a tesztelési jegyzőkönyvnek mezői 98%-ban MEGFELELTEK , azaz
+  - a specifikációban elfogadott funkciók működnek,
+A rendszertesztelési terv általánosan ismerteti a tesztelés folyamatát. 
+
+
+Tesztelés menete
+----------------
+1.2018/12/
+Az oldali tesztelésnek lezárása, az átadás-átvételi folyamat megkezdése.
+2.2018/12/
+Az üzembe állításhoz szükséges dokumentációk Megrendelőnek történő átadása, éles üzembe állítás.
+
+
+Tesztelési folyamat leírása
+---------------------------
+Az alfa és béta tesztek során a fejlesztők létrehozzák a jegyzőkönyv sablonját, majd felteszik egy online felületre.
+A tesztelők megnyitják az alkalmazást a webes vagy androidos felületen és elkezdik normál felhasználóként használni.
+A felmerülő hibákat, esetleg nem várt viselkedést feljegyzik a jegyzőkönyvbe. Az alfa teszt esetén ez a következőket tartalmazza:
+- Tesztelő neve
+- Rögzítés ideje
+- A hiba helye
+- A hiba leírása
+- Opcionális mellékletek
+- Böngésző neve, amelyben a hiba fellépett / android verzió száma
+
+A béta teszt jegyzőkönyvének mezői:
+- Tesztelő neve
+- Tesztelt elem
+- Tesztelt elem funkciója
+- Tesztelt elem helye az alkalmazásban
+- A támogatott böngészőkben megfelelően működik-e, vagy sem
+- A támogatott felbontásokon megfelelően működik-e, vagy sem
+- A támogatott android verzión megfelelően működik-e, vagy sem
+- A támogatott felbontásokon megfelelően működik-e, vagy sem
+
+A tesztek után a jegyzőkönyv véglegesítésre kerül, felkerül a verziókezelő rendszerbe. A felvett
+hibákat a fejlesztők ellenőrzik, reprodukálják, és létrehoznak hozzá egy feladatot majd javítják.
+
+
+
 
 
