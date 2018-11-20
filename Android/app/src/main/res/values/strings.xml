@@ -1,4 +1,7 @@
 <resources>
-    <string name="app_name">Tanuló App</string>
+    <string name="app_name">Tanulo App</string>
     <string name="login">Login</string>
+    <string name="email">Email</string>
+    <string name="password">Password</string>
+    <string name="registration"><u>Create new Account</u></string>
 </resources>
