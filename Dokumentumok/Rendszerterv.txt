@@ -165,6 +165,24 @@ A kérdésnek a cellájának a szine különbözi a válasz cellák szinétől.
 Elvárt működés: Ha a megfelelő választ választotta ki akkor az eltelt idő fügvényében kap pontokat.
 
 
+
+
+Admin felület tesztelendő funkciók, elemek:
+
+A login felületen való sikeres bejelentkezés után megjelenik az admin felület, ha adminként léptünk be.
+
+- A témát/tesztet létrehozása  gomb működése:
+Elvárt feladat:Ezzel a gombal az admin létrehozhat/feltölthet egy ój feladatot/tesztet.
+
+ 
+- A Témát/tesztet módosítása gomb működése: 
+Elvárt feladat:Az éppen kijelölt témán/feladaton módsít, felülírja azt.
+
+- A Témat/tesztet törlése gomb működése: 
+Elvárt feladat:A kiválasztott elemet teljes mértékben eltávolítja.
+
+
+
 Tesztterv
 ---------
 Ennek a dokumentumnak az a célja, hogy Tanulássegítő program megvalósítása projektben a rendszerek tesztelési elvárásait ismertesse.
