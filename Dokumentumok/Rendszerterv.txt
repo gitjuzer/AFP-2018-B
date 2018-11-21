@@ -39,7 +39,7 @@ Szerepkörök:
 Répás Kristóf Tamás: team leader, dinamikus kérdés-válasz felület fejlesztője
 Balogh Dániel: nyitó oldal fejlesztője
 Lehoczki Richárd: eredménytábla fejlesztője
-Dudás Botond:
+Dudás Botond: az admin felület fejlesztője
 Geng Julián:
 Vincze Flórián
 Váraljai Szabolcs:
