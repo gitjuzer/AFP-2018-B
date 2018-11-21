@@ -39,6 +39,11 @@ Szerepkörök:
 Répás Kristóf Tamás: team leader, dinamikus kérdés-válasz felület fejlesztője
 Balogh Dániel: nyitó oldal fejlesztője
 Lehoczki Richárd: eredménytábla fejlesztője
+Dudás Botond:
+Geng Julián:
+Vincze Flórián
+Váraljai Szabolcs:
+
 
 Ütemterv:
 	1. sprint(2018.11.07-11.14.): Funkcionális specifikáció, Követelményspecifikáció
