@@ -1,5 +1,7 @@
 package com.mycompany.database;
 
+import java.io.BufferedReader;
+import java.io.FileReader;
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.PreparedStatement;
@@ -11,14 +13,30 @@ import java.util.ArrayList;
 public class Database {
 
     private Connection connection = null;
+    private String url;
+    private String user;
+    private String password;
+
+    private boolean readSettings() {
+        boolean successful = true;
+        try {
+            BufferedReader reader = new BufferedReader(new FileReader("src/main/resources/dbConnection/db_connection.txt"));
+            url = reader.readLine();
+            user = reader.readLine();
+            password = reader.readLine();
+        } catch (Exception e) {
+            successful = false;
+        }
+        return successful;
+    }
 
     private boolean getConnection() {
-        String url = "jdbc:mysql://localhost:3306/rest?useUnicode=true&useJDBCCompliantTimezoneShift=true&useLegacyDatetimeCode=false&serverTimezone=UTC";
-        String user = "";
-        String password = "";
         boolean successful = true;
 
         try {
+            if (!readSettings()) {
+                throw new SQLException();
+            }
             connection = DriverManager.getConnection(url, user, password);
         } catch (SQLException e) {
             successful = false;
