@@ -5,11 +5,18 @@
  */
 package com.mycompany.restwebservice;
 
+import com.fasterxml.jackson.core.JsonProcessingException;
+import com.fasterxml.jackson.databind.ObjectMapper;
+import com.mycompany.JsonObjects.ResponseObject;
+import com.mycompany.TokenController.TokenController;
+import java.sql.SQLException;
+import javax.json.JsonObject;
 import javax.ws.rs.core.Context;
 import javax.ws.rs.core.UriInfo;
 import javax.ws.rs.Consumes;
 import javax.ws.rs.Produces;
 import javax.ws.rs.GET;
+import javax.ws.rs.POST;
 import javax.ws.rs.Path;
 import javax.ws.rs.PUT;
 import javax.ws.rs.PathParam;
@@ -54,5 +61,35 @@ public class ServiceResource {
     @PUT
     @Consumes(MediaType.APPLICATION_XML)
     public void putXml(String content) {
+    }
+    
+    
+    @POST
+    @Consumes(MediaType.APPLICATION_JSON)
+    @Produces(MediaType.APPLICATION_JSON)
+    public String getToken(JsonObject request) throws SQLException{
+        String user = request.getString("user");
+        String password = request.getString("password");
+        String token = TokenController.getToken(user, password);
+      
+        ResponseObject response = new ResponseObject();
+        if (token != null) {
+            response.status = 1;
+            response.message = token;
+        } else {
+            response.status = 0;
+            response.message = "Error.";
+        }
+
+        ObjectMapper mapper = new ObjectMapper();
+        String json = "";
+        try {
+            json = mapper.writeValueAsString(response);
+        } catch (JsonProcessingException e) {
+            json = e.getMessage();
+        }
+
+        return json;
+        
     }
 }

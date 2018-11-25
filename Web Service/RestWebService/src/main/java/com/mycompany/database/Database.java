@@ -34,11 +34,13 @@ public class Database {
         boolean successful = true;
 
         try {
-            if (!readSettings()) {
-                throw new SQLException();
-            }
-            connection = DriverManager.getConnection(url, user, password);
-        } catch (SQLException e) {
+//            if (!readSettings()) {
+//                throw new SQLException();
+//            }
+            Class.forName("com.mysql.jdbc.Driver").newInstance();
+            connection = DriverManager.getConnection("jdbc:mysql://localhost:3306/quiz?useUnicode=true&useJDBCCompliantTimezoneShift=true&useLegacyDatetimeCode=false&serverTimezone=UTC","teszt","1234");
+            //connection = DriverManager.getConnection(url, user, password);
+        } catch (Exception e) {
             successful = false;
         }
 
