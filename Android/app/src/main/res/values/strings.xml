@@ -5,4 +5,8 @@
     <string name="password">Password</string>
     <string name="registration"><u>Create new Account</u></string>
     <string name="fill_all_field">Please fill all input field!</string>
+    <string name="username">Username</string>
+    <string name="confirmpass">Confirm Password</string>
+    <string name="register">Registration</string>
+    <string name="backlogin">Back to Login</string>
 </resources>
