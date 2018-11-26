@@ -35,46 +35,53 @@
         <table style="width:100%">
               <tr">
                 <td class="answerParent">
-                  <button class="answer">VÁLASZ1</button>
+                  <a href="javascript:Answer()">
+                    <button class="answer" onclick="GoodAnswer()">JÓ VÁLASZ</button>
+                  </a>
                 </td>
                 <td class="answerParent">
-                  <button class="answer">VÁLASZ2</butto>
+                  <a href="javascript:Answer()">
+                    <button class="answer" onclick="BadAnswer()">VÁLASZ2</button>
+                  </a>
                 </td>
               </tr>
               <tr>
                 <td class="answerParent">
-                  <button class="answer">VÁLASZ3</button>
+                    <a href="javascript:Answer()">
+                      <button class="answer" onclick="BadAnswer()">VÁLASZ3</button>
+                    </a>
                 </td>
                 <td class="answerParent">
-                  <button class="answer">VÁLASZ4</button>
+                    <a href="javascript:Answer()">
+                      <button class="answer" onclick="BadAnswer()">VÁLASZ4</button>
+                    </a>
                 </td>
               </tr>
             </table>
     </div>
 
 
+    <button id="gomb" onclick="Asd()">Tovább</button>
+
     <div id="countdown_left">
-      <div id="number_left">
       <div class="countdown-number"></div>
         <svg>
           <circle r="80" cx="100" cy="100"></circle>
         </svg>
-      </div>
     </div>
     <div id="countdown_right">
-    <div id="number_right">
       <div class="countdown-number"></div>
         <svg>
           <circle r="80" cx="100" cy="100"></circle>
         </svg>
-      </div>
     </div>
 
     <div id="info">
       Egyéb információk
     </div>
 
-    
-    <script src="Kerdes_Valasz.js"></script>
+    <!--
+    <script src="Kerdes_Valasz.js"></script>-->
+    <script src="Kerdes_Valasz.ts"></script>
   </body>
 </html>

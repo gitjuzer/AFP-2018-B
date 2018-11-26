@@ -22,7 +22,6 @@ body {
 
 table, th, td {
   margin: auto;
-  /*margin-top: 158px;*/
   text-align: center;
 }
 
@@ -98,6 +97,7 @@ table, th, td {
   line-height: 200px;
 }
 
+
 #countdown_right {
   position: absolute;
   top: 125px;
@@ -113,15 +113,13 @@ table, th, td {
   line-height: 200px;
 }
 
-#number_left {
-  position: absolute 200px, 200px, 200px, 200px;
-
+.countdown-number {
+  position: absolute;
+  right: 60px;
+  font-size: 80px;
+  font-weight: bold;
 }
 
-#number_right {
-
-
-}
 
 svg {
   position: absolute;
@@ -132,7 +130,7 @@ svg {
   transform: rotateY(-180deg) rotateZ(-90deg);
 }
 
-svg circle{
+circle{
   stroke-dasharray: 500px;
   stroke-dashoffset: 0px;
   stroke-linecap: round;
@@ -140,6 +138,7 @@ svg circle{
   stroke: #D9042B;
   fill: none;
   animation: countdown 30s linear infinite forwards;
+  animation-play-state: running;
 }
 
 @keyframes countdown {
@@ -160,4 +159,10 @@ svg circle{
   border-collapse: collapse;
   margin: auto;
   margin-top: 175px;
+}
+
+
+.ques ul {
+  list-style: none;
+  padding-left: 0;
 }
