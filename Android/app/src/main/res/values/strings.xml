@@ -10,4 +10,7 @@
     <string name="confirmpass">Confirm Password</string>
     <string name="register">Registration</string>
     <string name="backlogin">Back to Login</string>
+    <string name="time">Time:</string>
+    <string name="score">Score:</string>
+    <string name="answer">Answer</string>
 </resources>
