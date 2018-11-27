@@ -36,7 +36,7 @@ tr:nth-of-type(even) {
 tbody > tr:hover{
     filter: brightness(66%);
 }
-.player{
+#player{
     text-align: center;
     font-size: 24px;
 }
@@ -60,5 +60,18 @@ table tr td:first-child::before
     content: counter(rowNumber);
     min-width: 1em;
     margin-right: 0.5em;
+}
+#links{
+    text-align: center;
+    margin-top: 16px;
+        
+}
+#links > a{
+    background: #592C12;
+    padding: 0.5em;
+    color: black;
+}
+#links > a:hover{
+    filter: brightness(80%);
 }
 

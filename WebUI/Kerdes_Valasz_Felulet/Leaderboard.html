@@ -7,10 +7,10 @@
     <title>Eredménytábla</title>
     <link rel="stylesheet" type="text/css" href="Kerdes_Valasz.css">
     <link rel="stylesheet" type="text/css" href="Leaderboard.css">
-    <script></script>
+    <script src="Leaderboard.js"></script>
 </head>
 
-<body>
+<body onload="FillLeaderboard();">
     <div id="left"></div>
     <div id="right"></div>
     <div id="top"></div>
@@ -22,69 +22,24 @@
 
         </div>
         <div class="table">
-            <table id="top10">
+            <table>
                 <thead>
                     <th></th>
                     <th>Név</th>
                     <th>Pontszám</th>
                 </thead>
-                <tbody>
-                    <tr>
-                        <td></td>
-                        <td>Gipsz Jakab</td>
-                        <td>6969</td>
-                    </tr>
-                    <tr>
-                        <td></td>
-                        <td>Kiss Pista</td>
-                        <td>5000</td>
-                    </tr>
-                    <tr class="playerTable">
-                        <td></td>
-                        <td>{{player.name}}</td>
-                        <td>3333</td>
-                    </tr>
-                    <tr>
-                        <td></td>
-                        <td>Kis Piroska</td>
-                        <td>3000</td>
-                    </tr>
-                    <tr>
-                        <td></td>
-                        <td>Kis Piroska</td>
-                        <td>3000</td>
-                    </tr>
-                    <tr>
-                        <td></td>
-                        <td>Kis Piroska</td>
-                        <td>3000</td>
-                    </tr>
-                    <tr>
-                        <td></td>
-                        <td>Kis Piroska</td>
-                        <td>3000</td>
-                    </tr>
-                    <tr>
-                        <td></td>
-                        <td>Kis Piroska</td>
-                        <td>3000</td>
-                    </tr>
-                    <tr>
-                        <td></td>
-                        <td>Kis Piroska</td>
-                        <td>3000</td>
-                    </tr>
-                    <tr>
-                        <td></td>
-                        <td>xxL33Tsniper420xx</td>
-                        <td>200</td>
-                    </tr>
+                <tbody id="top10">
+
 
                 </tbody>
             </table>
 
         </div>
-        <div class="player">Saját pontszámod: {{currentscore}}</div>
+        <div id="player" >Saját pontszámod: </div> <!-- {{player.score}} -->
+        <div id="links">
+            <a href="Leaderboard.html">Továbblépés</a>
+            <a href=".\Kerdes_Valasz.html">Újrapróbálás</a>
+        </div>
     </div>
     </div>
 </body>
