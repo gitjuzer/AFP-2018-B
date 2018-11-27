@@ -132,13 +132,11 @@ svg {
 
 circle{
   stroke-dasharray: 500px;
-  stroke-dashoffset: 0px;
   stroke-linecap: round;
   stroke-width: 10px;
   stroke: #D9042B;
   fill: none;
-  animation: countdown 30s linear infinite forwards;
-  animation-play-state: running;
+  animation: countdown 30s linear 1;
 }
 
 @keyframes countdown {
