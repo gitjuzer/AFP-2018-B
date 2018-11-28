@@ -54,41 +54,41 @@
                 android:id="@+id/answer1"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:layout_marginEnd="8dp"
+                android:layout_marginStart="8dp"
                 android:layout_marginTop="16dp"
                 android:background="@drawable/button_background"
-                android:text="@string/answer"
-                android:layout_marginEnd="8dp"
-                android:layout_marginStart="8dp"/>
+                android:text="@string/answer" />
 
             <Button
                 android:id="@+id/answer2"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:layout_marginEnd="8dp"
+                android:layout_marginStart="8dp"
                 android:layout_marginTop="16dp"
                 android:background="@drawable/button_background"
-                android:text="@string/answer"
-                android:layout_marginEnd="8dp"
-                android:layout_marginStart="8dp"/>
+                android:text="@string/answer" />
 
             <Button
                 android:id="@+id/answer3"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:layout_marginEnd="8dp"
+                android:layout_marginStart="8dp"
                 android:layout_marginTop="16dp"
                 android:background="@drawable/button_background"
-                android:text="@string/answer"
-                android:layout_marginEnd="8dp"
-                android:layout_marginStart="8dp"/>
+                android:text="@string/answer" />
 
             <Button
                 android:id="@+id/answer4"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:layout_marginEnd="8dp"
+                android:layout_marginStart="8dp"
                 android:layout_marginTop="16dp"
                 android:background="@drawable/button_background"
-                android:text="@string/answer"
-                android:layout_marginEnd="8dp"
-                android:layout_marginStart="8dp"/>
+                android:text="@string/answer" />
         </LinearLayout>
     </LinearLayout>
 </ScrollView>
