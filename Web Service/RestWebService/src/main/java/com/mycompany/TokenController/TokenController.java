@@ -50,6 +50,9 @@ public static boolean checkToken(String token) throws SQLException {
         return username != null && username != "";
     }
 
+public static String generateToken() {
+        return UUID.randomUUID().toString();
+    }
 
     private static String sha1(String input) {
         String sha1 = null;
