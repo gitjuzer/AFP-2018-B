@@ -12,7 +12,11 @@ import android.widget.Toast;
 
 import com.google.common.hash.Hashing;
 
+import org.json.JSONException;
+import org.json.JSONObject;
+
 import java.nio.charset.StandardCharsets;
+import hu.tanuloapp.afp.global.Authenticate;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -42,6 +46,8 @@ public class MainActivity extends AppCompatActivity {
 
     public void GoToRegister(){
         Intent intent = new Intent(this, RegisterActivity.class);
+        intent.putExtra("emailValue",email.getText().toString());
+        intent.putExtra("passValue",pass.getText().toString());
         finish();
         startActivity(intent);
     }
@@ -51,8 +57,19 @@ public class MainActivity extends AppCompatActivity {
         String passValue = pass.getText().toString();
         if ("".equals(emailValue) || "".equals(passValue))
             Toast.makeText(this, R.string.fill_all_field, Toast.LENGTH_LONG).show();
+        else if(!Authenticate.isEmailValid(emailValue) )
+            Toast.makeText(this, R.string.email_not_valid, Toast.LENGTH_LONG).show();
         else {
             passValue = Hashing.sha256().hashString(passValue, StandardCharsets.UTF_8).toString();
+        }
+        JSONObject login_json = new JSONObject();
+        try {
+            login_json.put("email", emailValue);
+            login_json.put("password", passValue);
+            Toast.makeText(this, "Kész a dzsézön", Toast.LENGTH_SHORT).show();
+        } catch (JSONException e) {
+            e.printStackTrace();
+            Toast.makeText(this, "Hibás a dzsézön", Toast.LENGTH_SHORT).show();
         }
 
     }

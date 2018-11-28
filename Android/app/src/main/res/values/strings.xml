@@ -13,4 +13,5 @@
     <string name="time">Time:</string>
     <string name="score">Score:</string>
     <string name="answer">Answer</string>
+    <string name="email_not_valid">Email format is not valid</string>
 </resources>
