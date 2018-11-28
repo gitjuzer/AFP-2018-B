@@ -3,12 +3,17 @@ package hu.tanuloapp.afp;
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
 
 import com.google.common.hash.Hashing;
+
+import org.json.JSONArray;
+import org.json.JSONException;
+import org.json.JSONObject;
 
 import java.nio.charset.StandardCharsets;
 
@@ -38,6 +43,7 @@ public class RegisterActivity extends AppCompatActivity {
                 BackToLogin();
             }
         });
+
     }
 
     public void BackToLogin(){
@@ -57,7 +63,17 @@ public class RegisterActivity extends AppCompatActivity {
             Toast.makeText(this, R.string.pass_dont_match, Toast.LENGTH_LONG).show();
         }
         else {
+            JSONObject jsonObject = new JSONObject();
             passValue = Hashing.sha256().hashString(passValue, StandardCharsets.UTF_8).toString();
+            try{
+            jsonObject.put("Username",usernameValue);
+            jsonObject.put("Email",emailValue);
+            jsonObject.put("Password",passValue);
+            jsonObject.put("RePassword",passValue);
+            }catch(JSONException e){
+                Log.d("REGISTER",e.getMessage());
+            }
+            Log.d("REGISTER",String.valueOf(jsonObject));
         }
     }
 }
