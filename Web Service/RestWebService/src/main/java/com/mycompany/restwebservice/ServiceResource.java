@@ -1,4 +1,4 @@
-﻿/*
+/*
  * To change this license header, choose License Headers in Project Properties.
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
@@ -9,7 +9,10 @@ import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.mycompany.JsonObjects.ResponseObject;
 import com.mycompany.TokenController.TokenController;
+import com.mycompany.database.Database;
+import java.sql.ResultSet;
 import java.sql.SQLException;
+import java.util.LinkedList;
 import javax.json.JsonObject;
 import javax.ws.rs.core.Context;
 import javax.ws.rs.core.UriInfo;
@@ -47,10 +50,13 @@ public class ServiceResource {
      * @return an instance of java.lang.String
      */
     @GET
-    @Produces(MediaType.APPLICATION_XML)
-    public String getXml() {
+    @Produces(MediaType.APPLICATION_JSON)
+    public String getQuestionAndAnswer() throws SQLException {
         //TODO return proper representation object
-        return "<message></message>";
+        //return "<message></message>";
+       Queries queries = new Queries();
+       
+       return queries.QuestionAndAnswer();
     }
 
     /**
@@ -59,41 +65,8 @@ public class ServiceResource {
      * @param content representation for the resource
      */
     @PUT
-    @Consumes(MediaType.APPLICATION_JSON)
-    @Produces(MediaType.APPLICATION_JSON)
-    public String registerUser(JsonObject request) throws SQLException {
-        String user = request.getString("username");
-        String password = request.getString("password");
-        String email = request.getString("email");
-        String token = TokenController.generateToken();
-
-        String query = "INSERT INTO users (username, password, email, token) VALUES (?,?,?,?)";
-        ArrayList<String> params = new ArrayList<String>();
-        params.add(user);
-        params.add(password);
-        params.add(email);
-        params.add(token);
-        Database db = new Database();
-        int insertedId = db.executeInsertStatement(query, params);
-
-        ResponseObject response = new ResponseObject();
-        if (insertedId > 0) {
-            response.status = 1;
-            response.message = "Registered successful.";
-        } else {
-            response.status = 0;
-            response.message = "Error.";
-        }
-
-        ObjectMapper mapper = new ObjectMapper();
-        String json = "";
-        try {
-            json = mapper.writeValueAsString(response);
-        } catch (JsonProcessingException e) {
-            json = e.getMessage();
-        }
-
-        return json;
+    @Consumes(MediaType.APPLICATION_XML)
+    public void putXml(String content) {
     }
     
     
@@ -125,4 +98,7 @@ public class ServiceResource {
         return json;
         
     }
+    
+    
+    
 }
