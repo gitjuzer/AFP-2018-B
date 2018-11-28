@@ -1,4 +1,4 @@
-/*
+﻿/*
  * To change this license header, choose License Headers in Project Properties.
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
@@ -33,6 +33,23 @@ public class TokenController {
 
         return token;
     }
+	
+public static boolean checkToken(String token) throws SQLException {
+        String query = "SELECT username FROM users WHERE token = ?";
+        ArrayList<String> params = new ArrayList<String>();
+        params.add(token);
+
+        String username = null;
+        Database db = new Database();
+        ResultSet result = db.executePreparedQuery(query, params);
+
+        if (result.next()) {
+            username = result.getString("username");
+        }
+
+        return username != null && username != "";
+    }
+
 
     private static String sha1(String input) {
         String sha1 = null;
