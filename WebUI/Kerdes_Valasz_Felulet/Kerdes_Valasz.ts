@@ -11,6 +11,9 @@ let valasz2 = document.getElementById('valasz2');
 let valasz3 = document.getElementById('valasz3');
 let valasz4 = document.getElementById('valasz4');
 let kerdes = document.getElementById('question_text');
+let questionCount = 0;
+let questionAsked = 0;
+let i = 0;
 let QuizContainer = document.getElementsByClassName('answer');
 let questionOrder = [
   ['2. kérdés', '2K1. válasz', '2K2. válasz', '2K3. válasz', '2K4. válasz'],
@@ -23,10 +26,8 @@ let questionOrder = [
   ['9. kérdés', '9K1. válasz', '9K2. válasz', '9K3. válasz', '9K4. válasz'],
   ['10. kérdés', '10K1. válasz', '10K2. válasz', '10K3. válasz', '10K4. válasz'],
 ];
-let questionCount = 0;
 questionOrder.length = 9; /*questionCount*/
-let questionAsked = 0;
-let i = 0;
+
 
 function Kerdes_Valasz_Hozzaad() {
     kerdes.innerText = questionOrder[i][0];
@@ -132,6 +133,8 @@ function Answer() {
   }
 }
 
+
+
 function countdownPause() {
   clearTimeout(countdown);
 }
@@ -139,7 +142,6 @@ function countdownReset() {
   countdownPause();
   countdown = 30;
 }
-
 
 function Circle() {
   const circles = document.getElementsByTagName('circle');

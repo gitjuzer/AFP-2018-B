@@ -30,16 +30,16 @@ public class Database {
         return successful;
     }
 
-    private boolean getConnection() {
+     private boolean getConnection() {
         boolean successful = true;
 
         try {
-//            if (!readSettings()) {
-//                throw new SQLException();
-//            }
+            if (!readSettings()) {
+                throw new SQLException();
+            }
             Class.forName("com.mysql.jdbc.Driver").newInstance();
-            connection = DriverManager.getConnection("jdbc:mysql://localhost:3306/quiz?useUnicode=true&useJDBCCompliantTimezoneShift=true&useLegacyDatetimeCode=false&serverTimezone=UTC","teszt","1234");
-            //connection = DriverManager.getConnection(url, user, password);
+            //connection = DriverManager.getConnection("jdbc:mysql://localhost:3306/quiz","quiz","quiz");
+            connection = DriverManager.getConnection(url, user, password);
         } catch (Exception e) {
             successful = false;
         }

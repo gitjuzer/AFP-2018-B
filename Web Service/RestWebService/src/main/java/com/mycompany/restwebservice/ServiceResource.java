@@ -1,4 +1,4 @@
-/*
+﻿/*
  * To change this license header, choose License Headers in Project Properties.
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
@@ -59,8 +59,41 @@ public class ServiceResource {
      * @param content representation for the resource
      */
     @PUT
-    @Consumes(MediaType.APPLICATION_XML)
-    public void putXml(String content) {
+    @Consumes(MediaType.APPLICATION_JSON)
+    @Produces(MediaType.APPLICATION_JSON)
+    public String registerUser(JsonObject request) throws SQLException {
+        String user = request.getString("username");
+        String password = request.getString("password");
+        String email = request.getString("email");
+        String token = TokenController.generateToken();
+
+        String query = "INSERT INTO users (username, password, email, token) VALUES (?,?,?,?)";
+        ArrayList<String> params = new ArrayList<String>();
+        params.add(user);
+        params.add(password);
+        params.add(email);
+        params.add(token);
+        Database db = new Database();
+        int insertedId = db.executeInsertStatement(query, params);
+
+        ResponseObject response = new ResponseObject();
+        if (insertedId > 0) {
+            response.status = 1;
+            response.message = "Registered successful.";
+        } else {
+            response.status = 0;
+            response.message = "Error.";
+        }
+
+        ObjectMapper mapper = new ObjectMapper();
+        String json = "";
+        try {
+            json = mapper.writeValueAsString(response);
+        } catch (JsonProcessingException e) {
+            json = e.getMessage();
+        }
+
+        return json;
     }
     
     
