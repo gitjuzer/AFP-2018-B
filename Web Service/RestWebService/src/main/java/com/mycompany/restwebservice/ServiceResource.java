@@ -52,12 +52,9 @@ public class ServiceResource {
      */
     @GET
     @Produces(MediaType.APPLICATION_JSON)
-    public String getQuestionAndAnswer() throws SQLException {
-        //TODO return proper representation object
-        //return "<message></message>";
-       Queries queries = new Queries();
-       
-       return queries.QuestionAndAnswer();
+    public String getQuestionAndAnswer(@QueryParam("task") int taskId) throws SQLException {
+
+        return Queries.QuestionAndAnswer(taskId);
     }
 
     /**
@@ -65,7 +62,7 @@ public class ServiceResource {
      *
      * @param content representation for the resource
      */
-     @PUT
+    @PUT
     @Consumes(MediaType.APPLICATION_JSON)
     @Produces(MediaType.APPLICATION_JSON)
     public String registerUser(JsonObject request) throws SQLException {
@@ -102,16 +99,15 @@ public class ServiceResource {
 
         return json;
     }
-    
-    
+
     @POST
     @Consumes(MediaType.APPLICATION_JSON)
     @Produces(MediaType.APPLICATION_JSON)
-    public String getToken(JsonObject request) throws SQLException{
+    public String getToken(JsonObject request) throws SQLException {
         String user = request.getString("user");
         String password = request.getString("password");
         String token = TokenController.getToken(user, password);
-      
+
         ResponseObject response = new ResponseObject();
         if (token != null) {
             response.status = 1;
@@ -130,9 +126,7 @@ public class ServiceResource {
         }
 
         return json;
-        
+
     }
-    
-    
-    
+
 }
