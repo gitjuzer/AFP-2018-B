@@ -10,6 +10,7 @@ import java.security.MessageDigest;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.ArrayList;
+import java.util.UUID;
 import javax.xml.bind.DatatypeConverter;
 
 /**
@@ -21,7 +22,7 @@ public class TokenController {
         String query = "SELECT token FROM users WHERE username = ? and password = ?";
         ArrayList<String> params = new ArrayList<String>();
         params.add(user);
-        params.add(sha1(password));
+        params.add(password);
 
         String token = null;
         ResultSet result;
@@ -34,14 +35,23 @@ public class TokenController {
         return token;
     }
 
-    private static String sha1(String input) {
-        String sha1 = null;
-        try {
-            MessageDigest msdDigest = MessageDigest.getInstance("SHA-1");
-            msdDigest.update(input.getBytes("UTF-8"), 0, input.length());
-            sha1 = DatatypeConverter.printHexBinary(msdDigest.digest());
-        } catch (Exception e) {
+    public static boolean checkToken(String token) throws SQLException {
+        String query = "SELECT username FROM users WHERE token = ?";
+        ArrayList<String> params = new ArrayList<String>();
+        params.add(token);
+
+        String username = null;
+        Database db = new Database();
+        ResultSet result = db.executePreparedQuery(query, params);
+
+        if (result.next()) {
+            username = result.getString("username");
         }
-        return sha1;
+
+        return username != null && username != "";
+    }
+
+    public static String generateToken() {
+        return UUID.randomUUID().toString();
     }
 }
