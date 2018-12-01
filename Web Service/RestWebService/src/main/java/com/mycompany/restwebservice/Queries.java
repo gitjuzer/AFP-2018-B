@@ -9,6 +9,7 @@ import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.mycompany.JsonObjects.AnswerObject;
 import com.mycompany.JsonObjects.QuestionObject;
+import com.mycompany.JsonObjects.TaskObject;
 import com.mycompany.database.Database;
 import java.sql.ResultSet;
 import java.sql.SQLException;
@@ -22,10 +23,11 @@ import static javax.xml.bind.DatatypeConverter.parseInt;
  */
 public class Queries {
 
-    public static String QuestionAndAnswer(int taskId) throws SQLException {
+    public static String getQuestionAndAnswer(int taskId) throws SQLException {
 
         Database db = new Database();
         ObjectMapper mapper = new ObjectMapper();
+
         String query = "SELECT * FROM questions WHERE task_id = ?";
         ArrayList<String> params = new ArrayList<String>();
         params.add(String.valueOf(taskId));
@@ -64,5 +66,31 @@ public class Queries {
         }
 
         return json;
+    }
+
+    public static String getTasks() throws SQLException {
+        String query = "SELECT * FROM task";
+
+        Database db = new Database();
+        ResultSet result = db.executeQuery(query);
+        ArrayList<TaskObject> tasks = new ArrayList<TaskObject>();
+
+        while (result.next()) {
+            TaskObject taskObject = new TaskObject();
+            taskObject.name = result.getString("name");
+            tasks.add(taskObject);
+        }
+
+        String json = "";
+        ObjectMapper mapper = new ObjectMapper();
+        
+        try {
+            json = mapper.writeValueAsString(tasks);
+        } catch (JsonProcessingException e) {
+            json = e.getMessage();
+        }
+
+        return json;
+
     }
 }

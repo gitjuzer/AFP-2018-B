@@ -51,10 +51,17 @@ public class ServiceResource {
      * @return an instance of java.lang.String
      */
     @GET
+    @Path("/{task}")
     @Produces(MediaType.APPLICATION_JSON)
-    public String getQuestionAndAnswer(@QueryParam("task") int taskId) throws SQLException {
+    public String getQuestionAndAnswer(@PathParam("task") int taskId) throws SQLException {
 
-        return Queries.QuestionAndAnswer(taskId);
+        return Queries.getQuestionAndAnswer(taskId);
+    }
+
+    @GET
+    @Produces(MediaType.APPLICATION_JSON)
+    public String getTasks() throws SQLException {
+        return Queries.getTasks();
     }
 
     /**
