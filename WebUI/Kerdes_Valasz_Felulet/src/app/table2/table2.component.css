@@ -1,0 +1,9 @@
+table {
+  height: 100px;
+  width: 300px;
+  background-color: rgb(175, 26, 53);
+  border: 5px solid black;
+  border-collapse: collapse;
+  margin: auto;
+  margin-top: 175px;
+}

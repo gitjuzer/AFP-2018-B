@@ -1,0 +1,8 @@
+svg {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 200px;
+  height: 200px;
+  transform: rotateY(-180deg) rotateZ(-90deg);
+}
