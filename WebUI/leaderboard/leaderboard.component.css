@@ -1,0 +1,79 @@
+.text{
+    text-align: center;   
+} 
+h1{
+    margin: 1.5em;
+}
+table{
+    background-color: #D9042B;
+    /* box-shadow: 6px 8px 9px rgba(0,0,0, 0.6); */
+    margin: 40px auto;
+    border: 10px solid black;
+   border-collapse: collapse;
+   min-width: 50%;
+   max-width: 50%;
+}
+th {
+    
+    background: #333 !important;
+    
+    color: #fff;
+    text-align: center;
+}
+tr {
+    background:#D9042B;
+    text-align: center;
+    
+    
+}
+th, td{
+    padding: 0.5em;    
+}
+
+tr:nth-of-type(even) {
+    background: #990000;
+}
+tbody > tr:hover{
+    filter: brightness(66%);
+}
+#player{
+    text-align: center;
+    font-size: 24px;
+    margin: 8px;
+}
+.playerTable {
+    background: #F2CEAE;
+    font-weight: bold;
+    position: relative;
+}
+
+table
+{
+    counter-reset: rowNumber;
+}
+
+table tr > td:first-child
+{
+    counter-increment: rowNumber;
+}
+                
+table tr td:first-child::before
+{
+    content: counter(rowNumber);
+    min-width: 1em;
+    margin-right: 0.5em;
+}
+#links{
+    text-align: center;
+    margin-top: 16px;
+        
+}
+#links > a{
+    background: #592C12;
+    padding: 0.5em;
+    color: black;
+}
+#links > a:hover{
+    filter: brightness(80%);
+}
+
