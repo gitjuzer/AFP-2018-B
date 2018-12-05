@@ -17,6 +17,7 @@ import javax.xml.bind.annotation.XmlRootElement;
 public class QuestionObject {
     @XmlElement public int id;
     @XmlElement public String text;
+    @XmlElement public String type;
     @XmlElement public ArrayList<AnswerObject> answers;
     
     public QuestionObject(){

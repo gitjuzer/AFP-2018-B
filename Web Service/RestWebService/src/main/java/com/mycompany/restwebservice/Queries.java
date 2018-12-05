@@ -40,6 +40,7 @@ public class Queries {
             QuestionObject temp = new QuestionObject();
             temp.id = parseInt(result.getString("id"));
             temp.text = result.getString("question");
+            temp.type = result.getString("type_id");
             questions.add(temp);
         }
 
@@ -79,6 +80,7 @@ public class Queries {
         while (result.next()) {
             TaskObject taskObject = new TaskObject();
             taskObject.name = result.getString("name");
+            taskObject.id = result.getString("id");
             tasks.add(taskObject);
         }
 

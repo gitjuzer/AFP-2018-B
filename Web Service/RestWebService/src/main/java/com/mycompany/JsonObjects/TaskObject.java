@@ -14,7 +14,10 @@ import javax.xml.bind.annotation.XmlRootElement;
  */
 @XmlRootElement
 public class TaskObject {
-
+    
+    @XmlElement
+    public String id;
+    
     @XmlElement
     public String name;
 }

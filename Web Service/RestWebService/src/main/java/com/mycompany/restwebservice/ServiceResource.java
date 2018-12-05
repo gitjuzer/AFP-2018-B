@@ -60,6 +60,7 @@ public class ServiceResource {
     }
 
     @GET
+    @Path("tasks/")
     @Produces(MediaType.APPLICATION_JSON)
     public String getTasks() throws SQLException {
         return Queries.getTasks();
