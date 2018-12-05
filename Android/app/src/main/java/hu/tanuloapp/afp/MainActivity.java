@@ -3,7 +3,6 @@ package hu.tanuloapp.afp;
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
-import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
@@ -39,15 +38,17 @@ public class MainActivity extends AppCompatActivity {
         newacc.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                GoToRegister();
+                GoToActivity(RegisterActivity.class);
             }
         });
     }
 
-    public void GoToRegister(){
-        Intent intent = new Intent(this, RegisterActivity.class);
-        intent.putExtra("emailValue",email.getText().toString());
-        intent.putExtra("passValue",pass.getText().toString());
+    public void GoToActivity(Class toActivity){
+        Intent intent = new Intent(this, toActivity);
+        if(toActivity == RegisterActivity.class) {
+            intent.putExtra("emailValue", email.getText().toString());
+            intent.putExtra("passValue", pass.getText().toString());
+        }
         finish();
         startActivity(intent);
     }
@@ -66,7 +67,8 @@ public class MainActivity extends AppCompatActivity {
         try {
             login_json.put("email", emailValue);
             login_json.put("password", passValue);
-            Toast.makeText(this, "Kész a dzsézön", Toast.LENGTH_SHORT).show();
+            Toast.makeText(this, login_json.toString(), Toast.LENGTH_SHORT).show();
+            GoToActivity(QuizActivity.class);
         } catch (JSONException e) {
             e.printStackTrace();
             Toast.makeText(this, "Hibás a dzsézön", Toast.LENGTH_SHORT).show();

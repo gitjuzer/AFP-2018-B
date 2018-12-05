@@ -73,7 +73,7 @@ public class RegisterActivity extends AppCompatActivity {
             }catch(JSONException e){
                 Log.d("REGISTER",e.getMessage());
             }
-            Log.d("REGISTER",String.valueOf(jsonObject));
+            Toast.makeText(this,String.valueOf(jsonObject),Toast.LENGTH_LONG).show();
         }
     }
 }
