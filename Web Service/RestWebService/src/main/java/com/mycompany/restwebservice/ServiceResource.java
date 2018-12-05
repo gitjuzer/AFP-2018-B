@@ -66,6 +66,18 @@ public class ServiceResource {
         return Queries.getTasks();
     }
 
+    
+    
+    //azt csináltuk @author Dávid / Marcell
+    @GET
+    @Path("toplist/")
+    @Produces(MediaType.APPLICATION_JSON)
+    public String getToplist()throws SQLException {
+    
+        return Queries.getToplist();
+    }
+    
+    
     /**
      * PUT method for updating or creating an instance of ServiceResource
      *

@@ -128,4 +128,46 @@ public class Queries {
         return json;
     }
 
+    
+    
+    
+     //ezt csináltuk @author Dávid / Marcell
+    public static String getToplist() throws SQLException{
+    
+    String query ="SELECT * FROM users INNER JOIN scores ON (users.id=scores.user_id) ORDER BY score.score";
+    
+    
+    Database db = new Database();
+    ResultSet result = db.executeQuery(query);
+    ArrayList<ScoreOject> task = new ArrayList<ScoreOject>();
+    
+        while (result.next()) {
+           ScoreOject scoreObject = new ScoreOject();
+            scoreObject.username= result.getString("username");
+            scoreObject.password= result.getString("password");
+            scoreObject.email= result.getString("email");
+            scoreObject.token= result.getString("token");
+            scoreObject.score= result.getInt("score");
+            scoreObject.user_id= result.getInt("user_id");
+            scoreObject.task_id= result.getInt("task_id");
+            task.add(scoreObject);
+            
+        }
+     String json = "";
+        ObjectMapper mapper = new ObjectMapper();
+        
+        try {
+            json = mapper.writeValueAsString(task);
+        } catch (JsonProcessingException e) {
+            json = e.getMessage();
+        }
+
+        return json;
+    
+    } 
+     
+    
+    
+    
+    
 }
