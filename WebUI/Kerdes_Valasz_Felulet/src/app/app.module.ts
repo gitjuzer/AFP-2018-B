@@ -1,3 +1,4 @@
+import { UserService } from './user.service';
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 
@@ -7,7 +8,7 @@ import { TableComponent } from './table/table.component';
 import { ButtonComponent } from './button/button.component';
 import { CircleComponent } from './circle/circle.component';
 import { Table2Component } from './table2/table2.component';
-import { SvgComponent } from './svg/svg.component';
+import { LoginComponent } from './login/login.component';
 
 @NgModule({
   declarations: [
@@ -17,12 +18,14 @@ import { SvgComponent } from './svg/svg.component';
     ButtonComponent,
     CircleComponent,
     Table2Component,
-    SvgComponent
+    LoginComponent
   ],
   imports: [
     BrowserModule
   ],
-  providers: [],
+  providers: [
+    UserService
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

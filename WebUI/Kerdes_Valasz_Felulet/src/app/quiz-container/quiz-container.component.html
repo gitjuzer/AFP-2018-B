@@ -1,0 +1,7 @@
+<div>
+  <input #nameField type="text" name="name"/>
+  <div *ngFor="let answer of answers">
+    <label *ngIf="visible">{{answer}}</label>
+    <app-table></app-table>
+  </div>
+</div>
