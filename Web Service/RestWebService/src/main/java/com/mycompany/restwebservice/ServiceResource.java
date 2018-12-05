@@ -70,7 +70,6 @@ public class ServiceResource {
     
     //azt csináltuk @author Dávid / Marcell
     @GET
-    @Path("toplist/")
     @Produces(MediaType.APPLICATION_JSON)
     public String getToplist()throws SQLException {
     

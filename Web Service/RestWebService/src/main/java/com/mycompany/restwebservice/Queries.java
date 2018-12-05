@@ -10,6 +10,7 @@ import com.fasterxml.jackson.databind.ObjectMapper;
 import com.mycompany.JsonObjects.AnswerObject;
 import com.mycompany.JsonObjects.QuestionObject;
 import com.mycompany.JsonObjects.ResponseObject;
+import com.mycompany.JsonObjects.ScoreOject;
 import com.mycompany.JsonObjects.TaskObject;
 import com.mycompany.database.Database;
 import java.sql.ResultSet;
@@ -101,10 +102,10 @@ public class Queries {
     public static String insertResults(String userId, String taskId, int score) throws SQLException {
         String query = "INSERT INTO scores (score, user_id, task_id) VALUES (?, ?, ?)";
         ArrayList<String> params = new ArrayList<String>();
+        params.add(String.valueOf(score));
         params.add(userId);
         params.add(taskId);
-        params.add(String.valueOf(score));
-        
+
         Database db = new Database();
         int insertedId = db.executeInsertStatement(query, params);
 
@@ -128,34 +129,26 @@ public class Queries {
         return json;
     }
 
-    
-    
-    
-     //ezt csináltuk @author Dávid / Marcell
-    public static String getToplist() throws SQLException{
-    
-    String query ="SELECT * FROM users INNER JOIN scores ON (users.id=scores.user_id) ORDER BY score.score";
-    
-    
-    Database db = new Database();
-    ResultSet result = db.executeQuery(query);
-    ArrayList<ScoreOject> task = new ArrayList<ScoreOject>();
-    
+    //ezt csináltuk @author Dávid / Marcell
+    public static String getToplist() throws SQLException {
+
+        String query = "SELECT s.score, u.username, t.name FROM scores s INNER JOIN users u ON s.user_id = u.id INNER JOIN task t ON s.task_id = t.id ORDER BY 1 DESC;";
+
+        Database db = new Database();
+        ResultSet result = db.executeQuery(query);
+        ArrayList<ScoreOject> task = new ArrayList<ScoreOject>();
+
         while (result.next()) {
-           ScoreOject scoreObject = new ScoreOject();
-            scoreObject.username= result.getString("username");
-            scoreObject.password= result.getString("password");
-            scoreObject.email= result.getString("email");
-            scoreObject.token= result.getString("token");
-            scoreObject.score= result.getInt("score");
-            scoreObject.user_id= result.getInt("user_id");
-            scoreObject.task_id= result.getInt("task_id");
-            task.add(scoreObject);
+            ScoreOject scoreObject = new ScoreOject();
+            scoreObject.username = result.getString("username");
+            scoreObject.task = result.getString("name");
+            scoreObject.score = parseInt(result.getString("score"));
             
+            task.add(scoreObject);
         }
-     String json = "";
+        String json = "";
         ObjectMapper mapper = new ObjectMapper();
-        
+
         try {
             json = mapper.writeValueAsString(task);
         } catch (JsonProcessingException e) {
@@ -163,11 +156,7 @@ public class Queries {
         }
 
         return json;
-    
-    } 
-     
-    
-    
-    
-    
+
+    }
+
 }

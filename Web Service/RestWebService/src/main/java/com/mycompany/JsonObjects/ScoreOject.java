@@ -18,16 +18,8 @@ public class ScoreOject {
     @XmlElement
     public String username;
     @XmlElement
-    public  String password;
-    @XmlElement
-    public String email;
-    @XmlElement
-    public String token;
-    @XmlElement
     public int score;
     @XmlElement
-    public int user_id;
-    @XmlElement
-    public int task_id;
+    public String task;
     
 }
