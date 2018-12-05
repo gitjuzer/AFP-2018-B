@@ -55,6 +55,7 @@ public class Queries {
                 answerObject.id = parseInt(result.getString("id"));
                 answerObject.text = result.getString("answer");
                 answerObject.correct = parseInt(result.getString("correct"));
+                answerObject.pair = result.getString("pair_id");
 
                 questions.get(i).answers.add(answerObject);
             }

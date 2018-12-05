@@ -17,4 +17,5 @@ public class AnswerObject {
     @XmlElement public int id;
     @XmlElement public String text;
     @XmlElement public int correct;
+    @XmlElement public String pair;
 }
