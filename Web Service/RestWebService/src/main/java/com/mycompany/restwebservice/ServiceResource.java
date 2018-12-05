@@ -26,6 +26,7 @@ import javax.ws.rs.PUT;
 import javax.ws.rs.PathParam;
 import javax.ws.rs.QueryParam;
 import javax.ws.rs.core.MediaType;
+import static javax.xml.bind.DatatypeConverter.parseInt;
 
 /**
  * REST Web Service
@@ -107,6 +108,24 @@ public class ServiceResource {
         return json;
     }
 
+    @Path("insert/")
+    @POST
+    @Consumes(MediaType.APPLICATION_JSON)
+    @Produces(MediaType.APPLICATION_JSON)
+    public String insertResults(JsonObject request) throws SQLException {
+        String token = request.getString("token");
+        String json = "Error.";
+
+        if (TokenController.checkToken(token)) {
+            String userId = request.getString("user_id");
+            String taskId = request.getString("task_id");
+            int score = parseInt(request.getString("score"));
+            json = Queries.insertResults(userId, taskId, score);
+        }
+        return json;
+    }
+
+    @Path("check/")
     @POST
     @Consumes(MediaType.APPLICATION_JSON)
     @Produces(MediaType.APPLICATION_JSON)

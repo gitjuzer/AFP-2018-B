@@ -9,6 +9,7 @@ import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.mycompany.JsonObjects.AnswerObject;
 import com.mycompany.JsonObjects.QuestionObject;
+import com.mycompany.JsonObjects.ResponseObject;
 import com.mycompany.JsonObjects.TaskObject;
 import com.mycompany.database.Database;
 import java.sql.ResultSet;
@@ -83,7 +84,7 @@ public class Queries {
 
         String json = "";
         ObjectMapper mapper = new ObjectMapper();
-        
+
         try {
             json = mapper.writeValueAsString(tasks);
         } catch (JsonProcessingException e) {
@@ -93,4 +94,35 @@ public class Queries {
         return json;
 
     }
+
+    public static String insertResults(String userId, String taskId, int score) throws SQLException {
+        String query = "INSERT INTO scores (score, user_id, task_id) VALUES (?, ?, ?)";
+        ArrayList<String> params = new ArrayList<String>();
+        params.add(userId);
+        params.add(taskId);
+        params.add(String.valueOf(score));
+        
+        Database db = new Database();
+        int insertedId = db.executeInsertStatement(query, params);
+
+        ResponseObject response = new ResponseObject();
+        if (insertedId > 0) {
+            response.status = 1;
+            response.message = "Scores added.";
+        } else {
+            response.status = 0;
+            response.message = "Error.";
+        }
+
+        ObjectMapper mapper = new ObjectMapper();
+        String json = "";
+        try {
+            json = mapper.writeValueAsString(response);
+        } catch (JsonProcessingException e) {
+            json = e.getMessage();
+        }
+
+        return json;
+    }
+
 }
