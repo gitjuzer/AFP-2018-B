@@ -18,10 +18,10 @@ import javax.xml.bind.DatatypeConverter;
  * @author Dániel
  */
 public class TokenController {
-    public static String getToken(String user, String password) throws SQLException {
-        String query = "SELECT token FROM users WHERE username = ? and password = ?";
+    public static String getToken(String email, String password) throws SQLException {
+        String query = "SELECT token FROM users WHERE email = ? and password = ?";
         ArrayList<String> params = new ArrayList<String>();
-        params.add(user);
+        params.add(email);
         params.add(password);
 
         String token = null;

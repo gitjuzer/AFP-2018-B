@@ -142,9 +142,9 @@ public class ServiceResource {
     @Consumes(MediaType.APPLICATION_JSON)
     @Produces(MediaType.APPLICATION_JSON)
     public String getToken(JsonObject request) throws SQLException {
-        String user = request.getString("user");
+        String email = request.getString("email");
         String password = request.getString("password");
-        String token = TokenController.getToken(user, password);
+        String token = TokenController.getToken(email, password);
 
         ResponseObject response = new ResponseObject();
         if (token != null) {
