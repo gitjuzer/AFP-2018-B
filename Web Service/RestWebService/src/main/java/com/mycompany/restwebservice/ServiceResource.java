@@ -10,10 +10,8 @@ import com.fasterxml.jackson.databind.ObjectMapper;
 import com.mycompany.JsonObjects.ResponseObject;
 import com.mycompany.TokenController.TokenController;
 import com.mycompany.database.Database;
-import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.ArrayList;
-import java.util.LinkedList;
 import javax.json.JsonObject;
 import javax.ws.rs.core.Context;
 import javax.ws.rs.core.UriInfo;
@@ -24,7 +22,6 @@ import javax.ws.rs.POST;
 import javax.ws.rs.Path;
 import javax.ws.rs.PUT;
 import javax.ws.rs.PathParam;
-import javax.ws.rs.QueryParam;
 import javax.ws.rs.core.MediaType;
 import static javax.xml.bind.DatatypeConverter.parseInt;
 
@@ -33,7 +30,7 @@ import static javax.xml.bind.DatatypeConverter.parseInt;
  *
  * @author Dániel
  */
-@Path("service")
+@Path("/service")
 public class ServiceResource {
 
     @Context

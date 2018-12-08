@@ -6,12 +6,10 @@
 package com.mycompany.TokenController;
 
 import com.mycompany.database.Database;
-import java.security.MessageDigest;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.UUID;
-import javax.xml.bind.DatatypeConverter;
 
 /**
  *
