@@ -19,9 +19,11 @@ import android.widget.Toast;
 
 import java.util.Objects;
 
-public class QuizActivity extends AppCompatActivity {
+public class QuizActivity extends AppCompatActivity implements
+        NavigationView.OnNavigationItemSelectedListener {
     long timeLong;
     private ActionBarDrawerToggle mToggle;
+    private DrawerLayout mDrawerLayout;
 
 
     @Override
@@ -32,31 +34,16 @@ public class QuizActivity extends AppCompatActivity {
         this.setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_PORTRAIT);
         StartTimer();
         this.setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_PORTRAIT);
-        DrawerLayout mDrawerLayout = findViewById(R.id.drawer_layout);
+        mDrawerLayout = findViewById(R.id.drawer_layout);
         mToggle = new ActionBarDrawerToggle(this, mDrawerLayout, R.string.open, R.string.close);
         mDrawerLayout.addDrawerListener(mToggle);
         mToggle.syncState();
         Objects.requireNonNull(getSupportActionBar()).setDisplayHomeAsUpEnabled(true);
         NavigationView navigationView = findViewById(R.id.nav_view);
+        if (navigationView != null) {
+            navigationView.setNavigationItemSelectedListener(this);
+        }
 
-        navigationView.setNavigationItemSelectedListener(new NavigationView.OnNavigationItemSelectedListener() {
-            @Override
-            public boolean onNavigationItemSelected(@NonNull MenuItem menuItem) {
-                int id = menuItem.getItemId();
-                menuItem.setChecked(true);
-                if(id == R.id.profile){
-                    GoToActivity(ProfilActivity.class);
-                }else if(id == R.id.quiz){
-                    GoToActivity(QuizActivity.class);
-                }else if(id == R.id.logout){
-
-                }
-
-                DrawerLayout drawer = (DrawerLayout)findViewById(R.id.drawer_layout);
-                drawer.closeDrawer(GravityCompat.START);
-                return true;
-            }
-        });
         ans1 = findViewById(R.id.answer1);
         ans2 = findViewById(R.id.answer2);
         ans3 = findViewById(R.id.answer3);
@@ -64,25 +51,25 @@ public class QuizActivity extends AppCompatActivity {
         ans1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                CheckAnswer(ans1,true);
+                CheckAnswer(ans1, true);
             }
         });
         ans2.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                CheckAnswer(ans2,false);
+                CheckAnswer(ans2, false);
             }
         });
         ans3.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                CheckAnswer(ans3,true);
+                CheckAnswer(ans3, true);
             }
         });
         ans4.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                CheckAnswer(ans4,false);
+                CheckAnswer(ans4, false);
             }
         });
     }
@@ -93,7 +80,7 @@ public class QuizActivity extends AppCompatActivity {
     }
 
     private void CheckAnswer(Button sender, boolean correct) {
-        if(correct)
+        if (correct)
             sender.setBackground(getDrawable(R.drawable.correct_btn_background));
         else
             sender.setBackground(getDrawable(R.drawable.wrong_btn_background));
@@ -127,4 +114,17 @@ public class QuizActivity extends AppCompatActivity {
         startActivity(intent);
     }
 
+    @Override
+    public boolean onNavigationItemSelected(@NonNull MenuItem menuItem) {
+        int id = menuItem.getItemId();
+        if (id == R.id.profile) {
+            GoToActivity(ProfilActivity.class);
+        } else if (id == R.id.quiz) {
+            GoToActivity(QuizActivity.class);
+        } else if (id == R.id.logout) {
+            GoToActivity(MainActivity.class);
+        }
+        mDrawerLayout.closeDrawer(GravityCompat.START);
+        return false;
+    }
 }

@@ -2,11 +2,6 @@ package hu.tanuloapp.afp;
 
 import android.content.Intent;
 import android.content.pm.ActivityInfo;
-import android.support.annotation.NonNull;
-import android.support.design.widget.NavigationView;
-import android.support.v4.view.GravityCompat;
-import android.support.v4.widget.DrawerLayout;
-import android.support.v7.app.ActionBarDrawerToggle;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
@@ -15,7 +10,6 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
-import android.view.MenuItem;
 
 import com.android.volley.Request;
 import com.android.volley.RequestQueue;
@@ -31,45 +25,18 @@ import org.json.JSONObject;
 import java.nio.charset.StandardCharsets;
 import java.util.HashMap;
 import java.util.Map;
-import java.util.Objects;
 
 import hu.tanuloapp.afp.global.Authenticate;
 
 public class MainActivity extends AppCompatActivity {
 
     private EditText email, pass;
-    private ActionBarDrawerToggle mToggle;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         this.setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_PORTRAIT);
-        DrawerLayout mDrawerLayout = findViewById(R.id.drawer_layout);
-        mToggle = new ActionBarDrawerToggle(this, mDrawerLayout, R.string.open, R.string.close);
-        mDrawerLayout.addDrawerListener(mToggle);
-        mToggle.syncState();
-        Objects.requireNonNull(getSupportActionBar()).setDisplayHomeAsUpEnabled(true);
-        NavigationView navigationView = findViewById(R.id.nav_view);
-        navigationView.setNavigationItemSelectedListener(new NavigationView.OnNavigationItemSelectedListener() {
-            @Override
-            public boolean onNavigationItemSelected(@NonNull MenuItem menuItem) {
-                int id = menuItem.getItemId();
-                menuItem.setChecked(true);
-                if(id == R.id.profile){
-                    GoToActivity(ProfilActivity.class);
-                }else if(id == R.id.quiz){
-                    GoToActivity(QuizActivity.class);
-                }else if(id == R.id.logout){
-
-                }
-
-                DrawerLayout drawer = (DrawerLayout)findViewById(R.id.drawer_layout);
-                drawer.closeDrawer(GravityCompat.START);
-                return true;
-            }
-        });
-
         Button login = findViewById(R.id.login);
         TextView newacc = findViewById(R.id.registration);
         Intent intent = getIntent();
@@ -77,6 +44,8 @@ public class MainActivity extends AppCompatActivity {
         pass = findViewById(R.id.pass);
         String strEmail = intent.getStringExtra("emailValue");
         String strPass = intent.getStringExtra("passValue");
+
+
         if (strEmail != null) {
             email.setText(strEmail);
             pass.setText(strPass);
@@ -94,11 +63,6 @@ public class MainActivity extends AppCompatActivity {
                 GoToActivity(RegisterActivity.class);
             }
         });
-    }
-
-    @Override
-    public boolean onOptionsItemSelected(MenuItem item) {
-        return mToggle.onOptionsItemSelected(item) || super.onOptionsItemSelected(item);
     }
 
     public void GoToActivity(Class toActivity) {
@@ -126,9 +90,9 @@ public class MainActivity extends AppCompatActivity {
             login_json.put("email", emailValue);
             login_json.put("password", passValue);
             if (Authenticate.isConnected(this)) {
-				if (SendLoginData(emailValue, passValue)) {
-					GoToActivity(QuizActivity.class);
-                }
+				//if (SendLoginData(emailValue, passValue)) {
+					GoToActivity(ProfilActivity.class);
+                //}
             } else
                 Toast.makeText(this, R.string.check_connection, Toast.LENGTH_SHORT).show();
 

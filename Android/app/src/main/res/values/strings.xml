@@ -20,4 +20,5 @@
     <string name="open">Open</string>
     <string name="close">Close</string>
     <string name="quiz">Quiz</string>
+    <string name="change_password">Change Password</string>
 </resources>
