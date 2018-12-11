@@ -15,4 +15,8 @@
     <string name="answer">Answer</string>
     <string name="email_not_valid">Email format is not valid</string>
     <string name="check_connection">Please check your internet connection!</string>
+    <string name="profile">Profile</string>
+    <string name="logout">Logout</string>
+    <string name="open">Open</string>
+    <string name="close">Close</string>
 </resources>
