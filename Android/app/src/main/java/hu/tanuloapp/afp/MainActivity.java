@@ -112,15 +112,8 @@ public class MainActivity extends AppCompatActivity {
             login_json.put("email", emailValue);
             login_json.put("password", passValue);
             if (Authenticate.isConnected(this)) {
-            if (SendLoginData(emailValue, passValue)) {
-
-                Toast.makeText(this, login_json.toString(), Toast.LENGTH_SHORT).show();
-                user.setId(1);
-                user.setEmail(emailValue);
-                user.setPassword(passValue);
-                user.setToken("token");
-                user.setUsername("Username");
-                GoToActivity(QuizActivity.class);
+				if (SendLoginData(emailValue, passValue)) {
+					GoToActivity(QuizActivity.class);
                 }
             } else
                 Toast.makeText(this, R.string.check_connection, Toast.LENGTH_SHORT).show();
