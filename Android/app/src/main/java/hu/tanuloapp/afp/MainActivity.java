@@ -1,14 +1,11 @@
 package hu.tanuloapp.afp;
 
 import android.content.Intent;
-import android.support.annotation.NonNull;
-import android.support.design.widget.NavigationView;
+import android.content.pm.ActivityInfo;
 import android.support.v4.widget.DrawerLayout;
-import android.support.v7.app.ActionBar;
 import android.support.v7.app.ActionBarDrawerToggle;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
-import android.support.v7.widget.Toolbar;
 import android.util.Log;
 import android.view.View;
 import android.widget.Button;
@@ -16,7 +13,6 @@ import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
 import android.view.MenuItem;
-import android.support.v4.view.GravityCompat;
 
 import com.android.volley.Request;
 import com.android.volley.RequestQueue;
@@ -32,30 +28,28 @@ import org.json.JSONObject;
 import java.nio.charset.StandardCharsets;
 import java.util.HashMap;
 import java.util.Map;
+import java.util.Objects;
 
 import hu.tanuloapp.afp.global.Authenticate;
-import hu.tanuloapp.afp.global.User;
 
 public class MainActivity extends AppCompatActivity {
 
-    EditText email, pass;
-    User user;
-    private DrawerLayout mDrawerLayout;
+    private EditText email, pass;
     private ActionBarDrawerToggle mToggle;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        mDrawerLayout = (DrawerLayout) findViewById(R.id.drawer_layout);
-        mToggle = new ActionBarDrawerToggle(this,mDrawerLayout, R.string.open, R.string.close);
+        this.setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_PORTRAIT);
+        DrawerLayout mDrawerLayout = findViewById(R.id.drawer_layout);
+        mToggle = new ActionBarDrawerToggle(this, mDrawerLayout, R.string.open, R.string.close);
         mDrawerLayout.addDrawerListener(mToggle);
         mToggle.syncState();
-        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+        Objects.requireNonNull(getSupportActionBar()).setDisplayHomeAsUpEnabled(true);
         Button login = findViewById(R.id.login);
         TextView newacc = findViewById(R.id.registration);
         Intent intent = getIntent();
-        user = User.getInstance();
         email = findViewById(R.id.email);
         pass = findViewById(R.id.pass);
         String strEmail = intent.getStringExtra("emailValue");
@@ -81,10 +75,7 @@ public class MainActivity extends AppCompatActivity {
 
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
-        if(mToggle.onOptionsItemSelected(item)){
-            return true;
-        }
-        return super.onOptionsItemSelected(item);
+        return mToggle.onOptionsItemSelected(item) || super.onOptionsItemSelected(item);
     }
 
     public void GoToActivity(Class toActivity) {
@@ -146,7 +137,7 @@ public class MainActivity extends AppCompatActivity {
         ) {
             @Override
             protected Map<String, String> getParams() {
-                Map<String, String> params = new HashMap<String, String>();
+                Map<String, String> params = new HashMap<>();
                 params.put("username", email);
                 params.put("password", pass);
                 return params;
