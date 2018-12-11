@@ -3,7 +3,7 @@
         android:width="3dp"
         android:color="@color/black" />
     <gradient
-        android:startColor="@color/question"
-        android:endColor="@color/question"
+        android:startColor="@color/red"
+        android:endColor="@color/red"
         />
 </shape>

@@ -12,6 +12,8 @@ import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.ActionBarDrawerToggle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.MenuItem;
+import android.view.View;
+import android.widget.Button;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -26,6 +28,7 @@ public class QuizActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_quiz);
+        final Button ans1, ans2, ans3, ans4;
         this.setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_PORTRAIT);
         StartTimer();
         this.setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_PORTRAIT);
@@ -54,11 +57,46 @@ public class QuizActivity extends AppCompatActivity {
                 return true;
             }
         });
+        ans1 = findViewById(R.id.answer1);
+        ans2 = findViewById(R.id.answer2);
+        ans3 = findViewById(R.id.answer3);
+        ans4 = findViewById(R.id.answer4);
+        ans1.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                CheckAnswer(ans1,true);
+            }
+        });
+        ans2.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                CheckAnswer(ans2,false);
+            }
+        });
+        ans3.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                CheckAnswer(ans3,true);
+            }
+        });
+        ans4.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                CheckAnswer(ans4,false);
+            }
+        });
     }
 
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
         return mToggle.onOptionsItemSelected(item) || super.onOptionsItemSelected(item);
+    }
+
+    private void CheckAnswer(Button sender, boolean correct) {
+        if(correct)
+            sender.setBackground(getDrawable(R.drawable.correct_btn_background));
+        else
+            sender.setBackground(getDrawable(R.drawable.wrong_btn_background));
     }
 
     private void StartTimer() {
@@ -71,6 +109,7 @@ public class QuizActivity extends AppCompatActivity {
                 timer.setText(time + ((timeLong / 1000) < 10 ?
                         "0" + String.valueOf(timeLong / 1000) : String.valueOf(timeLong / 1000)));
             }
+
             public void onFinish() {
                 StopTimer();
             }
