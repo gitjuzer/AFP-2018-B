@@ -9,6 +9,7 @@ import android.support.v7.app.ActionBarDrawerToggle;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v7.widget.Toolbar;
+import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
@@ -17,12 +18,20 @@ import android.widget.Toast;
 import android.view.MenuItem;
 import android.support.v4.view.GravityCompat;
 
+import com.android.volley.Request;
+import com.android.volley.RequestQueue;
+import com.android.volley.Response;
+import com.android.volley.VolleyError;
+import com.android.volley.toolbox.StringRequest;
+import com.android.volley.toolbox.Volley;
 import com.google.common.hash.Hashing;
 
 import org.json.JSONException;
 import org.json.JSONObject;
 
 import java.nio.charset.StandardCharsets;
+import java.util.HashMap;
+import java.util.Map;
 
 import hu.tanuloapp.afp.global.Authenticate;
 import hu.tanuloapp.afp.global.User;
@@ -103,6 +112,8 @@ public class MainActivity extends AppCompatActivity {
             login_json.put("email", emailValue);
             login_json.put("password", passValue);
             if (Authenticate.isConnected(this)) {
+            if (SendLoginData(emailValue, passValue)) {
+
                 Toast.makeText(this, login_json.toString(), Toast.LENGTH_SHORT).show();
                 user.setId(1);
                 user.setEmail(emailValue);
@@ -110,6 +121,7 @@ public class MainActivity extends AppCompatActivity {
                 user.setToken("token");
                 user.setUsername("Username");
                 GoToActivity(QuizActivity.class);
+                }
             } else
                 Toast.makeText(this, R.string.check_connection, Toast.LENGTH_SHORT).show();
 
@@ -118,5 +130,36 @@ public class MainActivity extends AppCompatActivity {
             Toast.makeText(this, "Hibás a dzsézön", Toast.LENGTH_SHORT).show();
         }
 
+    }
+
+    private boolean SendLoginData(final String email, final String pass) {
+        RequestQueue queue = Volley.newRequestQueue(this);
+        String url = "example.com/check/";
+        final boolean[] success = {false};
+        StringRequest postRequest = new StringRequest(Request.Method.POST, url,
+                new Response.Listener<String>() {
+                    @Override
+                    public void onResponse(String response) {
+                        success[0] = true;
+                    }
+                },
+                new Response.ErrorListener() {
+                    @Override
+                    public void onErrorResponse(VolleyError error) {
+                        // error
+                        Log.d("Error.Response", error.getMessage());
+                    }
+                }
+        ) {
+            @Override
+            protected Map<String, String> getParams() {
+                Map<String, String> params = new HashMap<String, String>();
+                params.put("username", email);
+                params.put("password", pass);
+                return params;
+            }
+        };
+        queue.add(postRequest);
+        return success[0];
     }
 }
