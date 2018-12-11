@@ -3,13 +3,18 @@
     android:layout_height="match_parent"
     android:layout_width="200dp"
     >
-   <!-- <group android:checkableBehavior="single"> -->
+    <group android:checkableBehavior="single">
         <item
             android:id="@+id/profile"
-            android:title="@string/profile"
-            />
+            android:icon="@drawable/ic_man_user"
+            android:title="@string/profile"  />
+        <item
+            android:id="@+id/quiz"
+            android:icon="@drawable/ic_mind"
+            android:title="@string/quiz"  />
         <item
             android:id="@+id/logout"
+            android:icon="@drawable/ic_logout"
             android:title="@string/logout" />
- <!--   </group> -->
+   </group>
 </menu>
