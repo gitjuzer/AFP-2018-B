@@ -18,7 +18,7 @@
         <div id="bottom"></div>
         <div>
             <div class="text">
-                <h1>Eredménytábla</h1>
+                <h1>{{currentTask}} eredménytábla</h1>
                 <h2>A legjobb 10 játékos pontszámai</h2>
     
             </div>
@@ -30,10 +30,10 @@
                         <th>Pontszám</th>
                     </thead>
                     <tbody id="top10">
-                        <tr *ngFor="let user of lb" >
-                            <td [ngClass]="{'playerTable' : user.id === ID}"></td>
-                            <td [ngClass]="{'playerTable' : user.id === ID}">{{user.name}}</td>
-                            <td [ngClass]="{'playerTable' : user.id === ID}">{{user.score}}</td>
+                        <tr *ngFor="let user of users" >
+                            <td [ngClass]="{'playerTable' : user.username === ID}"></td>
+                            <td [ngClass]="{'playerTable' : user.username === ID}">{{user.username}}</td>
+                            <td [ngClass]="{'playerTable' : user.username === ID}">{{user.score}}</td>
                         </tr>
     
                     </tbody>
@@ -41,7 +41,7 @@
     
             </div>
     </div>
-        <div id="player" >Saját pontszámod:  {{player.score}}</div> 
+        <div id="player" >Saját pontszámod: <!-- localStorage.getItem("score") --></div> 
         <div id="links">
             <a ng-click="reloadRoute()">Továbblépés</a>
             <a href=".\Kerdes_Valasz.html">Újrapróbálás</a>
