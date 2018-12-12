@@ -127,13 +127,12 @@ function BadAnswer() {
 function Answer() {
   if (questionAsked === questionOrder.length) {
     alert('Végeztél a kvízzel!' + questionAsked + ':' + questionOrder.length);
+    window.location.href = 'Leaderboard.html';
   }
   {
     // hideAllExcept(questionOrder[questionAsked]);
   }
 }
-
-
 
 function countdownPause() {
   clearTimeout(countdown);
