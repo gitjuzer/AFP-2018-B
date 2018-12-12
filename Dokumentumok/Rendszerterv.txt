@@ -179,20 +179,30 @@ Elvárt működés: job oldalt lent a login rész jelenik meg (felhasználónév
 - A Bejelentkezés gomb működése:  
 Elvárt működés: Megfelelő felhasználónév és jelszó megadása esetén a gomb lenyomásakor bejelentkezik.
 
-Bejelentkezés után megjelenik a játékos felület.
-
+Bejelentkezés után megjelenik a játékválasztó felület. Választható játékok: Kvíz, memóriajáték. A felhasználó kattintással választhat ezek közül.
+Innen lehet kijelentkezni is.
 
 Játék Felület:
+Kvíz:
 - A játék felület elrendezésének ellenőrzése:
-Elvárt működés:bal fent megjelin az idő egy nem egész körben, jobb fent megjelenik a pontszám egy hasonló nem egész körben.
-A kettő között megjelenik egy táblázat ami szinben elüt a háttértől. Fent egy nagy cellába kerül a kérdés, és ez alá kerülnek a válaszlehetőségek 4 külön cellába.
+Elvárt működés: a bal és a jobb felső sarokban megjelinik az idő egy piros körben. 30-tól számol visszafelé. Amennyiben a játékos jól válaszol, rosszul válaszol vagy lejár az idő, a felület betölti a következő kérdést. Erről felugró ablakokkal tájékoztatjuk a játékost. Az utolsó kérdés után pedig az eredménytáblát.
+A felület közepén egy vöröses részen megjelenik az aktuális pontszám.
+Az időmérőtől és a pontszám megjelenítőtől lejjeb megjelenik egy táblázat ami szinben elüt a háttértől. Fent egy nagy cellába kerül a kérdés, és ez alá kerülnek a válaszlehetőségek 4 külön cellába.
 A kérdésnek a cellájának a szine különböző a válasz cellák szinétől.
 
 - Pont számláló működése:
-Elvárt működés: Ha a megfelelő választ választotta ki akkor az eltelt idő fügvényében kap pontokat.
+Elvárt működés: Ha a megfelelő választ választotta ki akkor az eltelt idő fügvényében kap pontokat. Ha rosszul válaszolt, vagy lejárt az idő, akkor 1000 pont felett pontlevonás történik.
 
+Memóriajáték
+Elvárt működés: A játék indításakor megjelenik egy piros "Játék indítása" szöveg. A játékos bárhová kattint a felületen, ez eltűnik és elindul a játék a visszaszámlálóval együtt. Középen felül a játék címe alatt található a hátralévő idő és az eddigi forgatások száma.
+A kártyamátrix alapesetben 4x5-ös.
+Ha a játékos talál 2 azonos kártyát, akkor azokon egy animáció fut le addig, amíg le nem jár az idő.
+Minden kattintás hangeffektet generál.
+Ha lejár az idő, a felület egy animációval kiírja, hogy játék vége, és lehetőséget ad az újrapróbálásra.
+A játék során relaxációs zene fut a háttérben.
 
-
+Eredménytábla:
+Elvárt működés: a Kvíz és a Memóriajáték oldalról egyaránt elérhető a játék végeztével. Tartalmaz egy színes top10 táblázatot pontszámokkal, nevekkel. Külön kiemeli az aktuális játékost. Lehetőséget biztosít a továbblépésre, ami visszavisz a játékválasztó oldalra, és a játék újrajátszására.
 
 Admin felület tesztelendő funkciók, elemek:
 
